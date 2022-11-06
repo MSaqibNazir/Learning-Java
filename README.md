@@ -1,2 +1,2 @@
-# Learning-Java
+# Learning-JavaScript
 Learning javascript from Mosh Hamedani
