@@ -2,19 +2,20 @@
 
 
 // This is my first JavaScript Code!
-console.log('Hello World');
+// console.log('Hello World');
 
 //================= VARIABLES =====================
 let firstName = 'Saqib';
 let lastName = 'Nazeer';
 
-console.log(firstName,lastName);
+// console.log(firstName,lastName);
 
 
 //================= CONSTANT =====================
+//// if you want the value to be remain unchaged or same
 
 const intrestRate = 0.3;
-console.log(intrestRate);
+// console.log(intrestRate);
 
 
 
@@ -47,12 +48,16 @@ let person ={
 
 
 // Dot Notation
-person.naam = 'Aaqib Nazeer',
-console.log(person.naam)
+person.naam = 'Aaqib Nazeer';
+// console.log(person.naam)
 
 // Bracket Notation
-person['naam'] = 'Sumaiyya';
-console.log(person.naam);
+let selection = 'namech';
+
+person[selection] = 'Sumi';
+
+
+console.log(person.namech);
 
 
 
