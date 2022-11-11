@@ -57,7 +57,7 @@ let selection = 'namech';
 person[selection] = 'Sumi';
 
 
-console.log(person.namech);
+// console.log(person.namech);
 
 
 
@@ -66,8 +66,8 @@ console.log(person.namech);
 let selectedColors = ['Red', 'Green'];
 selectedColors[2] = 'Blue';
 
-console.log(selectedColors);
-console.log(selectedColors.length);
+// console.log(selectedColors);
+// console.log(selectedColors.length);
 
 
 
@@ -81,7 +81,7 @@ console.log(selectedColors.length);
               //parameter
 function greet(namePrefix, nameSuffix){
 //    console.log('Hello World');
-      console.log('Hello' +', ' + namePrefix +' '+ nameSuffix)
+    //   console.log('Hello' +', ' + namePrefix +' '+ nameSuffix)
       //          concatination          //
 };
      //Argument
@@ -127,3 +127,22 @@ function multiplication(num5, num6){
 }
 
 console.log( 'The product of 2 given numbers is = ' + multiplication(3, 6));
+
+
+function add(n1, n2){
+    return n1 + n2;
+
+}
+console.log(add(88,22))
+
+function sub(n3,n4){
+    return n3 - n4;
+}
+console.log(sub(33,11));
+
+
+function pro(n2,n4){
+    return n2*n4;
+
+}
+console.log(pro(786,100));
