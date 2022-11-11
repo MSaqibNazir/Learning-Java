@@ -95,10 +95,10 @@ function square(numb){
     return numb * numb;
 };
 let firstCalculation = square(4)
-console.log(firstCalculation);
+// console.log(firstCalculation);
 
 //  OR  //
-console.log(square(9));
+// console.log(square(9));
 
 
 
@@ -109,7 +109,7 @@ function addition(num1, num2){
     return num1 + num2;
 };
 
-console.log('The sum of num1 & num2 is = ' + addition(2,10));
+// console.log('The sum of num1 & num2 is = ' + addition(2,10));
 
 
 // ==== 2
@@ -118,7 +118,7 @@ function subtraction(num3, num4){
     return num3 - num4;
 };
 
-console.log('The difference b/w num3 & num4 is = ' + subtraction(80,20));
+// console.log('The difference b/w num3 & num4 is = ' + subtraction(80,20));
 
 
 // ==== 3
@@ -126,23 +126,23 @@ function multiplication(num5, num6){
     return num5*num6;
 }
 
-console.log( 'The product of 2 given numbers is = ' + multiplication(3, 6));
+// console.log( 'The product of 2 given numbers is = ' + multiplication(3, 6));
 
 
 function add(n1, n2){
     return n1 + n2;
 
 }
-console.log(add(88,22))
+// console.log(add(88,22))
 
 function sub(n3,n4){
     return n3 - n4;
 }
-console.log(sub(33,11));
+// console.log(sub(33,11));
 
 
 function pro(n2,n4){
     return n2*n4;
 
 }
-console.log(pro(786,100));
+// console.log(pro(786,100));
