@@ -157,9 +157,16 @@ const findGreaterCommonDivisor = (firstNumber, secondNumber) => {
     return findGreaterCommonDivisor(secondNumber, firstNumber % secondNumber);
 }
 
-console.log("Greatest Common Divisor: ", findGreaterCommonDivisor(50, 93));
+console.log("Greatest Common Divisor: ", findGreaterCommonDivisor(50, 80));
 
 
 
 
 // =================================================================================================
+
+function division (numb1, numb2){
+    return numb2 / numb1;
+
+}
+
+console.log (division(10, 90))
