@@ -147,6 +147,8 @@ function pro(n2,n4){
 }
 // console.log(pro(786,100));
 
+// =================================================================================================
+//                                   GCD Function by AAQIB
 
 const findGreaterCommonDivisor = (firstNumber, secondNumber) => {
     if (secondNumber === 0) {
@@ -156,3 +158,8 @@ const findGreaterCommonDivisor = (firstNumber, secondNumber) => {
 }
 
 console.log("Greatest Common Divisor: ", findGreaterCommonDivisor(50, 93));
+
+
+
+
+// =================================================================================================
