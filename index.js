@@ -146,3 +146,13 @@ function pro(n2,n4){
 
 }
 // console.log(pro(786,100));
+
+
+const findGreaterCommonDivisor = (firstNumber, secondNumber) => {
+    if (secondNumber === 0) {
+        return firstNumber;
+    }
+    return findGreaterCommonDivisor(secondNumber, firstNumber % secondNumber);
+}
+
+console.log("Greatest Common Divisor: ", findGreaterCommonDivisor(50, 93));
