@@ -63,3 +63,20 @@ console.log(b);
 // b = b % 50;
 b %= 50;
 console.log(b);
+
+
+
+// Comparison Operator 
+// ===================
+
+let c = 2
+
+// Relational
+console.log(c > 1);
+console.log(c >= 1);
+console.log(c < 1);
+console.log(c <= 1);
+
+// Equality
+console.log(c === 2);
+console.log(c !== 1);
