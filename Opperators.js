@@ -5,6 +5,7 @@
 // 4 Logical
 // 5 Bitwise
 
+//////////////////////===============//////////////////////////
 
 console.log("Arithmetic Operator")  ;
 console.log("===================")  ;
@@ -27,6 +28,7 @@ console.log(x);
 // Decreament (--)
 console.log(--y);
 
+//////////////////////===============//////////////////////////
 
 console.log("Assignment Operator")  
 console.log("===================")  ;
@@ -66,6 +68,7 @@ b %= 50;
 console.log(b);
 
 
+//////////////////////===============//////////////////////////
 
 console.log("Comparison Operator")  
 console.log("===================")  ;
@@ -82,7 +85,7 @@ console.log(c <= 1);
 console.log(c === 2);
 console.log(c !== 1);
 
-
+//////////////////////===============//////////////////////////
 
 console.log("Equality Operator") 
 console.log("===================")  ;
@@ -96,3 +99,22 @@ console.log(1 == 1);
 console.log("1" == 1);
 console.log(true == 1);
 console.log(false == 1);
+
+
+
+//////////////////////===============//////////////////////////
+console.log("Ternary Operator") 
+console.log("===================")  ;
+
+// If customers have more than 100 points, then
+// they are "GOLD" customers, Otherwise
+// they are "SILVER"  Customers.
+
+let points = 110;
+
+let type = points > 100 ? 'GOLD' : 'SILVER'
+console.log(type);
+
+points = 90;
+type = points > 100 ? 'GOLD' : 'SILVER'
+console.log(type)
