@@ -157,7 +157,7 @@ const findGreaterCommonDivisor = (firstNumber, secondNumber) => {
     return findGreaterCommonDivisor(secondNumber, firstNumber % secondNumber);
 }
 
-console.log("Greatest Common Divisor: ", findGreaterCommonDivisor(50, 80));
+// console.log("Greatest Common Divisor: ", findGreaterCommonDivisor(50, 80));
 
 
 
@@ -169,4 +169,4 @@ function division (numb1, numb2){
 
 }
 
-console.log (division(10, 90))
+// console.log (division(10, 90))
