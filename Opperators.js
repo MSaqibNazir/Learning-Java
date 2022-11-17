@@ -6,8 +6,9 @@
 // 5 Bitwise
 
 
-// Arithmetic Operator 
-// ===================
+console.log("Arithmetic Operator")  ;
+console.log("===================")  ;
+
 let x = 9;
 let y = 3;
 
@@ -27,8 +28,8 @@ console.log(x);
 console.log(--y);
 
 
-// Assignment Operator 
-// ===================
+console.log("Assignment Operator")  
+console.log("===================")  ;
 
 let a = 10;
 
@@ -66,8 +67,8 @@ console.log(b);
 
 
 
-// Comparison Operator 
-// ===================
+console.log("Comparison Operator")  
+console.log("===================")  ;
 
 let c = 2
 
@@ -80,3 +81,18 @@ console.log(c <= 1);
 // Equality
 console.log(c === 2);
 console.log(c !== 1);
+
+
+
+console.log("Equality Operator") 
+console.log("===================")  ;
+
+////// Strict Equality ( It checks same on b0th sides Value + Type)
+console.log(1 === 1);
+console.log("1" === 1);
+
+////// Lose Equality ( It checks only Value from left side )
+console.log(1 == 1);
+console.log("1" == 1);
+console.log(true == 1);
+console.log(false == 1);
