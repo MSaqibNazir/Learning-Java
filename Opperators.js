@@ -74,7 +74,7 @@ console.log(b); 2
 //////////////////////===============//////////////////////////
 
 console.log("...................")  ;
-console.log("Comparison Operator")  
+console.log("Comparison Operator")  //  It Gives TRUE OR FALSE
 console.log("===================")  ;
 
 let c = 2
@@ -96,8 +96,8 @@ console.log("Equality Operator")
 console.log("===================")  ;
 
 ////// Strict Equality ( It checks same on b0th sides Value + Type)
-console.log(1 === 1);
-console.log("1" === 1);
+console.log(1 === 1); //true
+console.log("1" === 1); // false bcz on left side it is string, and other is number
 
 ////// Lose Equality ( It checks only Value from left side )
 console.log(1 == 1);
@@ -119,12 +119,12 @@ console.log("===================");
 
 let points = 110;
 
-let type = points > 100 ? 'GOLD' : 'SILVER'
-console.log(type);
+let customerType = points > 100 ? 'GOLD' : 'SILVER'
+console.log(customerType);
 
 points = 90;
 type = points > 100 ? 'GOLD' : 'SILVER'
-console.log(type)
+console.log(customerType)
 
 
 
@@ -138,4 +138,15 @@ console.log("===================");
 // Logical Operator AND (&&)
 // Returns TRUE if both operands are TRUE
 
-console.log(true && true);
+console.log(true && true); // = true
+console.log(false && true); // = false
+console.log(false && false); // = false
+
+let highIncome = true;
+let goodCreditScore = true;
+
+let eligibleForLoan = highIncome && goodCreditScore ? 'TRUE' : 'FALSE'
+console.log(eligibleForLoan);
+
+let eligibleForLoan2 = highIncome && goodCreditScore;
+console.log(eligibleForLoan2);
