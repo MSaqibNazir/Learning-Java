@@ -7,6 +7,7 @@
 
 //////////////////////===============//////////////////////////
 
+console.log("...................")  ;
 console.log("Arithmetic Operator")  ;
 console.log("===================")  ;
 
@@ -30,12 +31,13 @@ console.log(--y);
 
 //////////////////////===============//////////////////////////
 
+console.log("...................")  ;
 console.log("Assignment Operator")  
 console.log("===================")  ;
 
 let a = 10;
 
-(a++);
+// (a++);
 a = a + 1 // these 2 are same 
 console.log(a);
 
@@ -45,31 +47,33 @@ let b = 100
 
 // b = b + 50;
 b += 50;
-console.log(b);
+console.log(b); // 150
+
+b = 4000
+
+// b = b - 500;
+b -= 500; // These 2 are same
+console.log(b); // 3500
 
 
-// b = b - 50;
-b -= 50;
-console.log(b);
+// b = b * 2;
+b *= 2;
+console.log(b); //7000
 
 
-// b = b * 50;
-b *= 50;
-console.log(b);
-
-
-// b = b / 50;
+// b = b / 50; b /= 50 These 2 are same
 b /= 50;
-console.log(b);
+console.log(b); // 140
 
 
-// b = b % 50;
+// b = b % 50; b %= 50;
 b %= 50;
-console.log(b);
+console.log(b); 2
 
 
 //////////////////////===============//////////////////////////
 
+console.log("...................")  ;
 console.log("Comparison Operator")  
 console.log("===================")  ;
 
@@ -87,6 +91,7 @@ console.log(c !== 1);
 
 //////////////////////===============//////////////////////////
 
+console.log("...................")  ;
 console.log("Equality Operator") 
 console.log("===================")  ;
 
@@ -103,8 +108,10 @@ console.log(false == 1);
 
 
 //////////////////////===============//////////////////////////
-console.log("Ternary Operator") 
-console.log("===================")  ;
+
+console.log("...................")  ;
+console.log("Ternary Operator");
+console.log("===================");
 
 // If customers have more than 100 points, then
 // they are "GOLD" customers, Otherwise
@@ -118,3 +125,17 @@ console.log(type);
 points = 90;
 type = points > 100 ? 'GOLD' : 'SILVER'
 console.log(type)
+
+
+
+
+//////////////////////===============//////////////////////////
+
+console.log("...................")  ;
+console.log("Logical Operator");
+console.log("===================");
+
+// Logical Operator AND (&&)
+// Returns TRUE if both operands are TRUE
+
+console.log(true && true);
