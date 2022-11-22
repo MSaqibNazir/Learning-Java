@@ -149,4 +149,26 @@ let eligibleForLoan = highIncome && goodCreditScore ? 'TRUE' : 'FALSE'
 console.log(eligibleForLoan);
 
 let eligibleForLoan2 = highIncome && goodCreditScore;
-console.log(eligibleForLoan2);
+console.log(eligibleForLoan2); // true
+
+// Logical Operator OR (||)
+// Returns TRUE if one of the operands is True
+
+console.log(true || false); // true
+console.log(false || false); //false
+console.log(true || true); //true
+
+
+// if one of following is true then customer is eligible for loan
+
+let hiIncome = true;
+let goodCredit = false;
+
+let eligibleForLoan3 = hiIncome || goodCredit;
+console.log('eligible for Loan ' + eligibleForLoan3); //true
+
+// Logical Operator NOT (!)
+// it gives opposite = true into false, or False into True
+
+let applicationRefused = !eligibleForLoan2 //
+console.log('Application has been Refused for load ' + applicationRefused);
