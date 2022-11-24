@@ -131,9 +131,9 @@ console.log(customerType)
 
 //////////////////////===============//////////////////////////
 
-console.log("...................")  ;
-console.log("Logical Operator");
-console.log("===================");
+console.log("..............................")  ;
+console.log("Logical Operator with Booleans"); 
+console.log("==============================");
 
 // Logical Operator AND (&&)
 // Returns TRUE if both operands are TRUE
@@ -172,3 +172,59 @@ console.log('eligible for Loan ' + eligibleForLoan3); //true
 
 let applicationRefused = !eligibleForLoan2 //
 console.log('Application has been Refused for load ' + applicationRefused);
+
+
+
+
+
+
+console.log("....................................");
+console.log("Logical Operator with Non - Booleans"); 
+console.log("====================================");
+
+// The result of logical operator always be true or false is not necessary, it depends on the value of operads we have
+// If there is no boolean true or false in operands, than javascript will try to interpret it as what we called truthy or falsy
+
+// That values which are falsy, not a boolean false but Falsy
+
+//Falsy (false)
+// 1 Undefined
+// 2 null
+// 3 0
+// 4 boolean false
+// 5 ""
+// 6 NaN
+
+// Anything That is not Falsy -> Truthy
+
+// false || true
+// true (console result)
+
+// false || "Mosh"
+// "Mosh" (console result)
+
+// false || 1
+// 1 (console result)
+
+// Qk in examples mein koi falsy nhi hai is liye truthy hain,, or jo truthy hai wo true consider kryga Javascript, is liye truthy ki value result mn aygi
+
+
+//  false || 1 || 2
+//  1 (console result) ( It is called Short - circuiting )
+
+let userColor = "Red"
+let defaultColor = "Blue"
+let currentColor = userColor || defaultColor
+
+console.log(currentColor); // >> Red
+
+
+//  2nd Case
+
+let userColor2 = undefined
+let defaultColor2 = "Blue"
+let currentColor2 = userColor2 || defaultColor2
+
+console.log(currentColor2); // >> Blue (qk undefined falsy hai is liye wo skip hogya)
+
+
