@@ -236,8 +236,15 @@ console.log("===================");
 
 let d = 2 + 3 * 10
 
-console.log(d); //15
+console.log(d); //32
 
 let e = (2 + 3) * 10
 
 console.log(e); //50
+
+
+console.log(".....................");
+console.log("=======THE END======="); 
+console.log("=====================");
+
+
