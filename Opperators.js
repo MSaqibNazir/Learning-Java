@@ -228,3 +228,16 @@ let currentColor2 = userColor2 || defaultColor2
 console.log(currentColor2); // >> Blue (qk undefined falsy hai is liye wo skip hogya)
 
 
+console.log("...................");
+console.log("Operator Precedence"); 
+console.log("===================");
+
+// DMAS RULE :-D
+
+let d = 2 + 3 * 10
+
+console.log(d); //15
+
+let e = (2 + 3) * 10
+
+console.log(e); //50
