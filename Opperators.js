@@ -259,21 +259,6 @@ bc = ca
 console.log(ab);
 console.log(bc);
 
-
-
-
-let xx = 10
-xx++
-let yy = xx
-
-console.log(yy);
-
-
-
-
-
-
-
 console.log(".....................");
 console.log("=======THE END======="); 
 console.log("=====================");
