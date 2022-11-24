@@ -242,6 +242,33 @@ let e = (2 + 3) * 10
 
 console.log(e); //50
 
+console.log("...........................");
+console.log("Exercisre - Swapping Values"); 
+console.log("===========================");
+
+
+let ab = 'Red';
+let bc = 'Blue';
+
+// console.log(ab);
+// console.log(bc); // It is a task to swap the values
+
+let ca = ab
+ab = bc
+bc = ca
+console.log(ab);
+console.log(bc);
+
+
+
+
+
+
+
+
+
+
+
 
 console.log(".....................");
 console.log("=======THE END======="); 
