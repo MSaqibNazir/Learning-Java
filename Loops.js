@@ -43,7 +43,7 @@ while (i <=5){
 
 let j = 0;
 while (j <= 5){
-    if (j % 2 !== 0) console.log('Hello While Odd Values', j)
+    // if (j % 2 !== 0) console.log('Hello While Odd Values', j)
     j++;
 };
 
@@ -56,11 +56,15 @@ while ( m <= 15){
 
 let n = 10;
 while ( n <= 100){
-    if( n % 2 !== 1)console.log( 'Hello number', n )
+    // if( n % 2 !== 1)console.log( 'Hello Even Numbers', n )
+    // if (n % 2 !== 0 ) console.log ( 'Hello Odd Numbers', n)
     n++;
 };
 
 // Do-While Loop
+// ==============
+
+
 let k = 0;
 do{
     // if (k % 2 !== 0) console.log('Hello do while loop' , k);
@@ -73,3 +77,10 @@ do {
     l++;
 } while ( l <= 5);
 
+// Practice
+let z = 11;
+
+do {
+    if (z % 5 === 0) console.log( z, "is divisible by 5 between 11 & 45" )
+    z++;
+} while ( z <= 45);
