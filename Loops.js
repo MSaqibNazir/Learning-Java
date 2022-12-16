@@ -88,15 +88,25 @@ do {
 
 
 // For - in Loop
-
+// For in use hota hai objects ki elemets k liye
 const personNew ={
     name : 'Saqib',
     age : 24
 };
 
-for (let key in personNew)
- console.log(key,  personNew[key]);
+// for (let key in personNew)
+//  console.log(key,  personNew[key]);
 
- const colors = ['red', 'green', 'blue'];
- for (let index in colors)
- console.log( index, colors[index])
+//  const colors = ['red', 'green', 'blue'];
+//  for (let index in colors)
+//  console.log( index, colors[index]);
+
+
+
+
+// For - of
+// For of use hota hai arrays k elements k liye
+
+const colors = ['Red', 'Blue', 'Green', 'Yellow'];
+for (let color of colors)
+console.log (color)
