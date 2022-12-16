@@ -80,10 +80,10 @@ do {
 // Practice
 let z = 11;
 
-do {
+// do {
     // if (z % 5 === 0) console.log( z, "is divisible by 5 between 11 & 99" )
-    z++;
-} while ( z <= 99);
+    // z++;
+// } while ( z <= 99);
 
 
 
@@ -107,7 +107,7 @@ const personNew ={
 // For - of
 // For of use hota hai arrays k elements k liye
 
-const colors = ['Red', 'Blue', 'Green', 'Yellow'];
+// const colors = ['Red', 'Blue', 'Green', 'Yellow'];
 // for (let color of colors)
 // console.log (color);
 
@@ -130,4 +130,19 @@ const colors = ['Red', 'Blue', 'Green', 'Yellow'];
     // a++;
 // };
 
+// // // // //
+// Exercise
 
+// make a funtion takes two number which return max number of both of them;
+
+
+let numbers = max (5, 100);
+console.log(numbers);
+
+function max (numbr1, numbr2){
+    // if (numbr1 > numbr2) return numbr1;
+    // else return numbr2;
+
+    return (numbr1 > numbr2) ? numbr1 : numbr2;
+
+};
