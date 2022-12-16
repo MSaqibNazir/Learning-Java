@@ -81,6 +81,22 @@ do {
 let z = 11;
 
 do {
-    if (z % 5 === 0) console.log( z, "is divisible by 5 between 11 & 45" )
+    // if (z % 5 === 0) console.log( z, "is divisible by 5 between 11 & 99" )
     z++;
-} while ( z <= 45);
+} while ( z <= 99);
+
+
+
+// For - in Loop
+
+const personNew ={
+    name : 'Saqib',
+    age : 24
+};
+
+for (let key in personNew)
+ console.log(key,  personNew[key]);
+
+ const colors = ['red', 'green', 'blue'];
+ for (let index in colors)
+ console.log( index, colors[index])
