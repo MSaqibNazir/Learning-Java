@@ -108,5 +108,26 @@ const personNew ={
 // For of use hota hai arrays k elements k liye
 
 const colors = ['Red', 'Blue', 'Green', 'Yellow'];
-for (let color of colors)
-console.log (color)
+// for (let color of colors)
+// console.log (color);
+
+// ========================================================
+
+// Break & Continue
+// // // Break is use to jump to the loop
+// // // continue is use to jump over n iteration
+
+// let a = 0;
+// while (a <= 10){
+
+    // if (a === 5) break;
+    // if (a % 2 === 0){
+    //     a++;
+    //     continue;
+    // }
+
+    // console.log(a);
+    // a++;
+// };
+
+
