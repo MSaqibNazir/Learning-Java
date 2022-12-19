@@ -136,8 +136,8 @@ const personNew ={
 // make a funtion takes two number which return max number of both of them;
 
 
-let numbers = max (5, 100);
-console.log(numbers);
+let numbers = max (599, 100);
+// console.log(numbers);
 
 function max (numbr1, numbr2){
     // if (numbr1 > numbr2) return numbr1;
@@ -145,4 +145,26 @@ function max (numbr1, numbr2){
 
     return (numbr1 > numbr2) ? numbr1 : numbr2;
 
+};
+
+function max(numbr1, numbr2){
+    return (numbr1 < numbr2) ? numbr1 : numbr2;
+};
+
+
+// Another exercise
+
+let sizeOfImage = isLandscape(81,80)
+console.log(sizeOfImage);
+
+function isLandscape(width, height){
+    // return () ? a : b;  {{{ FORMAT }}}
+    return (width > height) ? true : false;
+};
+
+//  acc to lecture
+console.log(isPotrait( 400, 500));
+
+function isPotrait(width, height){
+    return (width < height); // QK Return ka result bhi boolean mein ata hai
 };
