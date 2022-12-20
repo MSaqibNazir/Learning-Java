@@ -27,7 +27,7 @@ function showNumbers(limit){
 // =========== //
 
 const array = [ '', 1, 2 , 0, undefined , 'SAQIB'];
-console.log(coutnTruthy(array));
+// console.log(coutnTruthy(array));
 
 function coutnTruthy(array){
     let count = 0;
@@ -37,3 +37,19 @@ function coutnTruthy(array){
         return count;
     
 };
+let movie ={
+    releaseYear : 2020,
+    title : 'a',
+    director : 'b',
+    rating : 4.5
+
+};
+
+showProperties(movie);
+
+function showProperties(obj){
+
+    for ( let key in obj )
+    if (typeof obj[key] === 'string')
+    console.log (key, obj[key]);
+}
