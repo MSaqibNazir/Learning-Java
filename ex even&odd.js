@@ -105,11 +105,11 @@ function diff (limit){
 
 const saqib = [99, 61, 99];
 
-console.log(calculateGrade(saqib));
+// console.log(calculateGrade(saqib));
 
 function calculateGrade(saqib) {
-    const average = calculateAverage(saqib)
-     console.log ( average );
+    // const average = calculateAverage(saqib)
+    //  console.log ( average );
 
     if ( average < 60) return "F";
     if ( average < 70) return "D";
@@ -117,7 +117,7 @@ function calculateGrade(saqib) {
     if ( average < 90) return "B";
     return "A";
 
-}
+};
 
 function calculateAverage(array){
     let sum = 0;
@@ -125,4 +125,21 @@ function calculateAverage(array){
     for (let value of array)
     sum += value;
     return sum / array.length;
+};
+
+
+// Star Exercise
+//==============
+
+showStars(20);
+
+function showStars(rows){
+    
+    for(let row = 1; row <= rows; row++){
+        let pattern = '';
+        
+        for ( let i = 0; i < row ; i++)
+            pattern += '*'
+            console.log(pattern);
+    }
 }
