@@ -57,4 +57,37 @@ function showProperties(obj){
     for (let prop in obj )
     if (typeof obj[prop] !== 'string')
     console.log( prop, obj[prop])
+};
+
+
+
+
+// Sum of multiples of 3 & 5
+//==========================//
+
+console.log(sum(10));
+
+function sum(limit){
+    let sum = 0;
+
+    for ( i = 0; i <= limit; i++ )
+        if ( i % 3 === 0 || i % 5 === 0)
+        // console.log (i)
+        sum += i;
+        
+    return sum;
+    
+}
+
+console.log(diff(10))
+function diff (limit){
+    let diff = 0;
+
+    for (i = 0; i <= limit; i++)
+        if ( i % 3 === 0 || i % 5 === 0 ){
+            // console.log(i)
+            diff -= i;}
+    
+    return diff;
+
 }
