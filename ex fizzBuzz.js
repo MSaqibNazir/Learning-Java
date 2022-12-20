@@ -16,7 +16,7 @@ console.log(output);
 
 function fizzBuzz (input){
     if (typeof input !== 'number')
-        return 'Not a number';
+        return NaN;
     
     if ( (input % 2 === 0) && (input % 3 === 0))
         return 'FizzBuzz'
