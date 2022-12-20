@@ -128,7 +128,7 @@ function calculateAverage(array){
 };
 
 
-// Star Exercise
+// Star Exercise (Nested Loop-Loop in Loop)
 //==============
 
 showStars(20);
@@ -141,5 +141,18 @@ function showStars(rows){
         for ( let i = 0; i < row ; i++)
             pattern += '*'
             console.log(pattern);
+    }
+};
+
+
+showA(4);
+
+function showA (lines){
+    for (let line = 1 ; line <= lines; line++){
+        let formatForA = '';
+            
+        for (let i = 0; i < line ; i++)
+            formatForA += 'a'
+        console.log (formatForA)
     }
 }
