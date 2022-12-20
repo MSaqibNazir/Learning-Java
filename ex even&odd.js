@@ -26,13 +26,14 @@ function showNumbers(limit){
 // Exercise Count Truthy
 // =========== //
 
-const array = ["", 1, 10, undefined , 3, 4 , 0, null];
-console.log(countTruthy(array));
+const array = [ '', 1, 2 , 0, undefined , 'SAQIB'];
+console.log(coutnTruthy(array));
 
-function countTruthy(array){
+function coutnTruthy(array){
     let count = 0;
-    for(let value of array)
-        if (value) // is truthy, then,,;
+    for ( let value of array )
+        if(value)
         count++;
         return count;
-}
+    
+};
