@@ -131,7 +131,7 @@ function calculateAverage(array){
 // Star Exercise (Nested Loop-Loop in Loop)
 //==============
 
-showStars(20);
+showStars(6);
 
 function showStars(rows){
     
@@ -140,7 +140,7 @@ function showStars(rows){
         
         for ( let i = 0; i < row ; i++)
             pattern += '*'
-            console.log(pattern);
+            // console.log(pattern);
     }
 };
 
@@ -152,7 +152,40 @@ function showA (lines){
         let formatForA = '';
             
         for (let i = 0; i < line ; i++)
-            formatForA += 'a'
-        console.log (formatForA)
+            formatForA += 'a';
+        // console.log (formatForA)
+    }
+};
+
+showB(5)
+function showB(lining){
+
+    for (let line = 1; line <= lining; line++){
+        let patternB = '';
+
+        for (let i = 0; i < line ; i++)
+            patternB += 'b';
+        // console.log(patternB)
     }
 }
+
+// prime Number Exercie
+//=====================
+
+// Two types of numbers = Prime & Composites
+
+// showPrimes(20)
+
+// function showPrimes(limit){
+//     for ( let number = 1; number <= limit ; number++) 
+//         if (isPrime(number)) console.log(number)
+// }
+
+// function isPrime(number){
+
+//         for ( let factor = 2; factor < number; factor++)
+//             if (number % factor === 0)// it means it is not a prime number
+//             return false;
+
+//         return true; 
+// }
