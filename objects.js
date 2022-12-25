@@ -77,3 +77,18 @@ delete sphere.color;
 // delete sphere.draw;
 
 // console.log( sphere )
+
+
+// Fucntions are objects
+// ======================
+
+function Oval (radius){
+    this.radius = radius;
+    this.draw = function (){
+        console.log('draw');
+    }
+};
+
+Oval.call ({}, 1, 2, 3);
+Oval.apply ({}, [1, 2, 3])
+const anotherSphere = new Oval(1);
