@@ -2,8 +2,6 @@
 
 
 showPrime(20)
-// i means number
-// j means factor
 
 function showPrime (limit){
     for (let number = 2; number < limit ; number++)

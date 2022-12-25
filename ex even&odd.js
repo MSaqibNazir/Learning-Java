@@ -103,12 +103,12 @@ function diff (limit){
 // 90 - 100 = A
 
 
-const saqib = [99, 61, 99];
+const marks = [99, 61, 99];
 
 // console.log(calculateGrade(saqib));
 
-function calculateGrade(saqib) {
-    // const average = calculateAverage(saqib)
+function calculateGrade(marks) {
+    // const average = calculateAverage(marks)
     //  console.log ( average );
 
     if ( average < 60) return "F";
@@ -174,18 +174,18 @@ function showB(lining){
 
 // Two types of numbers = Prime & Composites
 
-// showPrimes(20)
+showPrimes(20)
 
-// function showPrimes(limit){
-//     for ( let number = 1; number <= limit ; number++) 
-//         if (isPrime(number)) console.log(number)
-// }
+function showPrimes(limit){
+    for ( let number = 1; number <= limit ; number++) 
+        if (isPrime(number)) console.log(number)
+}
 
-// function isPrime(number){
+function isPrime(number){
 
-//         for ( let factor = 2; factor < number; factor++)
-//             if (number % factor === 0)// it means it is not a prime number
-//             return false;
+        for ( let factor = 2; factor < number; factor++)
+            if (number % factor === 0)// it means it is not a prime number
+            return false;
 
-//         return true; 
-// }
+        return true; 
+}
