@@ -137,13 +137,13 @@ increase(obj);
 const circle = {
     radius : 1,
     draw : function (){
-        console.log ('draw');
+        // console.log ('draw');
     }
 };
 
 // we can use for in loop for objects
-for (let key in circle )
-    console.log (key, circle[key]);
+// for (let key in circle )
+    // console.log (key, circle[key]);
 
 // we can use for of loop i.e use for arrays so that,
 
@@ -152,17 +152,52 @@ for (let key in circle )
 
 //solution
 
-for (let key of Object.keys(circle))
-    console.log(key)
+// for (let key of Object.keys(circle))
+    // console.log(key)
     // radius
     // draw
 
 //Similarly,
-for ( let entry of Object.entries(circle))
-    console.log(entry) // it gives set of property and its value
+// for ( let entry of Object.entries(circle))
+    // console.log(entry) // it gives set of property and its value
     // radius, 1
     // draw , f
 
 // for checking the existence of properties in object,, use this
 
-if ( 'radius' in circle ) console.log ('yes') // yes
+// if ( 'radius' in circle ) console.log ('yes') // yes
+
+
+// by this we get all properties of an onject and copy it to another object
+
+/// ==============/// =================== ///============
+
+// Cloning an object
+
+const cloneCircle ={
+    radius : 1,
+    color : 'red',
+    draw : function (){
+        console.log('draw');
+    }
+}
+
+// now i m going to clone the properties of cloneCircle in to another one
+
+// const another ={};
+// for ( let key in cloneCircle )
+//     another[key] = cloneCircle[key]
+// it is the old way to copy properties i=of an onject to another object
+
+// New ways are as under
+
+const another = Object.assign({
+    size: "small"
+}, cloneCircle);
+
+// spread operator
+const another1 = {...cloneCircle};
+
+// both methods are used to copy the properties...
+
+console.log (another);
