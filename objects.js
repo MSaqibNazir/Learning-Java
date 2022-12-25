@@ -49,15 +49,31 @@ const circle2 = createCircle(2);
 // function naming = Pascal notation = OneTwoThreeFour
 
 
-function Cirle (radius){
+function Circle (radius){
     this.radius = radius;
     this.draw = function(){
         console.log('draw');
     }
 };
 
-const myCircle = new Cirle(1);
-console.log(myCircle);
+const myCircle = new Circle(1);
+// console.log(myCircle);
 
-const myCircle2 = new Cirle(3);
-console.log(myCircle2)
+const myCircle2 = new Circle(3);
+// console.log(myCircle2);
+
+//===================================
+
+//Dynamic nature of objects
+
+const sphere = {
+    radius: 1
+};
+
+sphere.color = 'red';
+sphere.draw = function(){};
+
+delete sphere.color;
+// delete sphere.draw;
+
+// console.log( sphere )
