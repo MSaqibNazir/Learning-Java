@@ -202,10 +202,12 @@ const another1 = {...cloneCircle};
 
 // console.log (another);s
 
+// BUILY IN OBJECTS
+//==================================
+
 
 // Math // Google
 // String ( Properties ) // Google
-
 // Template Literals
 
 const userName = "Aaqib";
@@ -217,3 +219,9 @@ Thanks for contacting us.
 
 Regards,
 Saqib"`
+
+
+// Date
+
+const now = new Date();
+console.log(now.toTimeString())
