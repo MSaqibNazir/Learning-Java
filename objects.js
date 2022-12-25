@@ -313,3 +313,17 @@ console.log (post);
 
 
 //=====================================
+
+//Exercise 5- Constructor Functions
+
+function Post (title, body, author, views, comments, isLive){
+    this.title = title;
+    this.body = body;
+    this.author = author;
+    this.views = views;
+    this.comments = comments;
+    this.isLive = isLive;
+}
+
+let myPost1 = new Post('a', 'b', 'c', 30, 'd', false);
+console.log(myPost1);
