@@ -224,4 +224,22 @@ Saqib"`
 // Date
 
 const now = new Date();
-console.log(now.toTimeString())
+// console.log(now.toTimeString());
+
+//===========================================================================
+// Exercise 1 - Address Object
+
+let address ={
+    street : 'No.1',
+    city: 'Karachi',
+    zipCode: 75642
+}
+
+showAddress(address)
+
+function showAddress(){
+    for (let key in address)
+    console.log ( key, address[key])
+}
+
+
