@@ -4,7 +4,7 @@
 
 // Lets start
 
-const circle = {
+const pentagon = {
     radius : 1,
     location : {
         x : 1,
@@ -17,7 +17,7 @@ const circle = {
 };
 // We can call the function of object as follow
 
-circle.draw(); // Method
+pentagon.draw(); // Method
 
 //================================================================================
 
@@ -49,17 +49,17 @@ const circle2 = createCircle(2);
 // function naming = Pascal notation = OneTwoThreeFour
 
 
-function Circle (radius){
+function Pentagon (radius){
     this.radius = radius;
     this.draw = function(){
         console.log('draw');
     }
 };
 
-const myCircle = new Circle(1);
+const myCircle = new Pentagon(1);
 // console.log(myCircle);
 
-const myCircle2 = new Circle(3);
+const myCircle2 = new Pentagon(3);
 // console.log(myCircle2);
 
 //===================================
@@ -115,7 +115,7 @@ let ab = 10;
 let cd = ab;
 
 ab = 20;
-console.log (cd) //10, becaus they are independant
+// console.log (cd) //10, becaus they are independant
 
 // reference
 
@@ -125,5 +125,44 @@ function increase(obj){
     obj.value++
 };
 
-increase(obj)
-console.log(obj); // 31
+increase(obj);
+// console.log(obj); // 31
+
+
+// ==============================================
+
+// Enumerating properties of an object
+
+
+const circle = {
+    radius : 1,
+    draw : function (){
+        console.log ('draw');
+    }
+};
+
+// we can use for in loop for objects
+for (let key in circle )
+    console.log (key, circle[key]);
+
+// we can use for of loop i.e use for arrays so that,
+
+// for ( let key of circle )
+    // console.log (key) // circle is not iterable
+
+//solution
+
+for (let key of Object.keys(circle))
+    console.log(key)
+    // radius
+    // draw
+
+//Similarly,
+for ( let entry of Object.entries(circle))
+    console.log(entry) // it gives set of property and its value
+    // radius, 1
+    // draw , f
+
+// for checking the existence of properties in object,, use this
+
+if ( 'radius' in circle ) console.log ('yes') // yes
