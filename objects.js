@@ -92,3 +92,38 @@ function Oval (radius){
 Oval.call ({}, 1, 2, 3);
 Oval.apply ({}, [1, 2, 3])
 const anotherSphere = new Oval(1);
+
+
+// Value      VS   Reference
+// (Primitives)
+
+// numbers     |    Objects
+// string      |    Fucntions
+// boolean     |    Arrays
+// symbol 
+// null 
+// undefined 
+
+
+
+//Primitives Type are copied by their Values
+// Onjects/Reference Types are copied by thier reference
+
+// Primitives/
+
+let ab = 10;
+let cd = ab;
+
+ab = 20;
+console.log (cd) //10, becaus they are independant
+
+// reference
+
+let obj = {value : 30};
+
+function increase(obj){
+    obj.value++
+};
+
+increase(obj)
+console.log(obj); // 31
