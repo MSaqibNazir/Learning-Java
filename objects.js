@@ -200,4 +200,20 @@ const another1 = {...cloneCircle};
 
 // both methods are used to copy the properties...
 
-console.log (another);
+// console.log (another);s
+
+
+// Math // Google
+// String ( Properties ) // Google
+
+// Template Literals
+
+const userName = "Aaqib";
+
+const message =
+`"Hi ${userName} ${5 + 2},
+
+Thanks for contacting us.
+
+Regards,
+Saqib"`
