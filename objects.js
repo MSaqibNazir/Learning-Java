@@ -287,8 +287,29 @@ function areEqual (myAddress1, myAddress2){
     return myAddress1.street === myAddress2.street &&
     myAddress1.city === myAddress2.city &&
     myAddress1.zipCode === myAddress2.zipCode;
-}
+};
 
 function areSame (myAddress1, myAddress2){
     return myAddress1 === myAddress2
+};
+
+
+
+// Exercise 4 - Blog Post Object
+
+let post = {
+    title : 'a',
+    body : 'b',
+    author : 'c',
+    views : 10,
+    comments : [
+        { user: 'a', comment : 'b'},
+        { user: 'b', comment : 'c'}
+    ],
+    isLive : true
 }
+
+console.log (post);
+
+
+//=====================================
