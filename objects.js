@@ -235,11 +235,40 @@ let address ={
     zipCode: 75642
 }
 
-showAddress(address)
+// showAddress(address)
 
 function showAddress(){
     for (let key in address)
     console.log ( key, address[key])
 }
 
+// Exercide 2 - Factory and Constructor Functions
 
+function showFactoryAddress(street, city, zipCode){
+    return{
+        street,
+        city,
+        zipCode
+    }
+}
+
+const newAddress1 = showFactoryAddress('a', 'b', 'c')
+console.log(newAddress1)
+
+const newAddress2 = showFactoryAddress('No.2', 'Lahore', '75666')
+console.log (newAddress2)
+
+//==============================================
+
+function ShowConstructorAddress (street, city, zipCode){
+    this.street = street;
+    this.city = city;
+    this.zipCode = zipCode
+}
+
+const myAddress1 = new ShowConstructorAddress('a', 'b', 'c');
+console.log(myAddress1)
+
+
+const myAddress2 = new ShowConstructorAddress('No.2', 'Lahore', '75666');
+console.log(myAddress2)
