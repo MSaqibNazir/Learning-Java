@@ -267,8 +267,28 @@ function ShowConstructorAddress (street, city, zipCode){
 }
 
 const myAddress1 = new ShowConstructorAddress('a', 'b', 'c');
-console.log(myAddress1)
+console.log(myAddress1);
 
 
-const myAddress2 = new ShowConstructorAddress('No.2', 'Lahore', '75666');
-console.log(myAddress2)
+const myAddress2 = new ShowConstructorAddress('a', 'b', 'c');
+console.log(myAddress2);
+
+
+const myAddress3 = myAddress1
+
+
+// Exercise 3 - Object Equality
+console.log(areEqual(myAddress1, myAddress2));
+console.log(areSame(myAddress1, myAddress2));
+console.log(areSame(myAddress1, myAddress3));
+
+
+function areEqual (myAddress1, myAddress2){
+    return myAddress1.street === myAddress2.street &&
+    myAddress1.city === myAddress2.city &&
+    myAddress1.zipCode === myAddress2.zipCode;
+}
+
+function areSame (myAddress1, myAddress2){
+    return myAddress1 === myAddress2
+}
