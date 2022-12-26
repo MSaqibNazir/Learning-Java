@@ -73,3 +73,24 @@ console.log(courseShort);
 const courseFind2 = courses.findIndex(course => course.id === 2)
 console.log(courseFind2);
 
+
+// Removing Element
+
+const evenNumber = [2,4,6,8]
+
+//End
+const removedLast = evenNumber.pop() // removes the last element
+console.log(removedLast); //8
+console.log(evenNumber);
+
+//Bigenning
+const removeFirst = evenNumber.shift() // removes the first element
+console.log(evenNumber);
+console.log(removeFirst); // 2
+
+
+//Middle
+const removeMid = evenNumber.splice(1, 1) //removes the desired element 
+console.log(evenNumber); // remaining 4 & 6 mein sy 6 gyaa, 4 bacha
+console.log(removeMid);
+
