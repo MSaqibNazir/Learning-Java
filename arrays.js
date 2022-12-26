@@ -1,6 +1,7 @@
 // New Section - Arrays
 
 // Adding elements in an array 
+
 const numbers = [3, 4];
 
 // End
@@ -19,6 +20,8 @@ numbers.unshift (1, 2)
 numbers.splice(2, 0, 1, 'b')
 console.log(numbers);
 
+
+
 //Finding Elements in an array - Primitives
 
 // const numbers = [1, 2, 1, 'b', 3, 4, 5, 6]
@@ -34,6 +37,8 @@ console.log(numbers.indexOf('c')); // -1
 
 console.log(numbers.indexOf(3) !== -1); // gives true/false // its ugly
 console.log(numbers.includes('b')); // gives true /false // best way for the same requirement
+
+
 
 //Finding Elements in an array - Reference Types
 
@@ -74,6 +79,7 @@ const courseFind2 = courses.findIndex(course => course.id === 2)
 console.log(courseFind2);
 
 
+
 // Removing Element
 
 const evenNumber = [2,4,6,8]
@@ -93,6 +99,7 @@ console.log(removeFirst); // 2
 const removeMid = evenNumber.splice(1, 1) //removes the desired element 
 console.log(evenNumber); // remaining 4 & 6 mein sy 6 gyaa, 4 bacha
 console.log(removeMid); // 6
+
 
 // Emptying an array
 
@@ -117,6 +124,39 @@ console.log(oddNumber);
 // Solution no 4
 
 while ( oddNumber.length > 0)
-oddNumber.pop();
+    oddNumber.pop();
+
 console.log(oddNumber); 
 console.log(anotherOdd);
+
+
+// Cmbining and Slicing an array
+
+const first = [5,6,7];
+const second = [8,9,0];
+
+const combine = first.concat(second)
+console.log(combine); // [5, 6, 7, 8, 9, 0]
+
+const slice = combine.slice(2, 4) // cut kr k new array bnata hai
+
+console.log(slice);
+console.log(combine);
+
+
+const abc = [{id : 1}]
+const def = [1,2,3,4,5,6]
+abc[0].id = 10;
+console.log(abc);
+
+const conP = abc.concat(def)
+console.log(conP);
+
+const conpSlice = conP.slice(2, 5)
+console.log(conP);
+
+const defSlice = conP.slice(2, 5)
+console.log(defSlice);
+
+const compSplice = conP.splice(3)
+console.log(conP)
