@@ -39,7 +39,7 @@ console.log(number);
 
 const courses = [
     { id : 1, name : 'Node.js' },
-    { id : 2, name : 'Node.js'}
+    { id : 2, name : 'javascipt'}
 ];
 
 courses.sort( function (a, b){
@@ -55,4 +55,19 @@ courses.sort( function (a, b){
     return 0;
 
 })
-console.log(courses)
+console.log(courses);
+
+// testing the elements of an array
+
+
+// numbers = [1,2,3,4];
+
+const allValuesPositive = numbers.every(value => value >= 0);
+console.log(allValuesPositive);
+
+numbers.push (-1, 8);
+console.log(numbers);
+
+const atLeastOnePositive = numbers.some(value => value >= 0);
+
+console.log(atLeastOnePositive);
