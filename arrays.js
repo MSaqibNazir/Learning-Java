@@ -92,5 +92,31 @@ console.log(removeFirst); // 2
 //Middle
 const removeMid = evenNumber.splice(1, 1) //removes the desired element 
 console.log(evenNumber); // remaining 4 & 6 mein sy 6 gyaa, 4 bacha
-console.log(removeMid);
+console.log(removeMid); // 6
 
+// Emptying an array
+
+let oddNumber = [1,3,5,7,9];
+let anotherOdd = oddNumber;
+
+//Solution 1
+
+oddNumber = []; // but if there is only one reference
+console.log(oddNumber); // But
+console.log(anotherOdd); // it is still in memory
+
+
+// Solution no 2
+oddNumber.length = 0
+console.log(oddNumber); // :)
+
+// Solution No 3
+oddNumber.splice(0, oddNumber.length)
+console.log(oddNumber); 
+
+// Solution no 4
+
+while ( oddNumber.length > 0)
+oddNumber.pop();
+console.log(oddNumber); 
+console.log(anotherOdd);
