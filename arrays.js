@@ -19,7 +19,6 @@ numbers.unshift (1, 2)
 numbers.splice(2, 0, 1, 'b')
 console.log(numbers);
 
-
 //Finding Elements in an array - Primitives
 
 // const numbers = [1, 2, 1, 'b', 3, 4, 5, 6]
@@ -35,3 +34,26 @@ console.log(numbers.indexOf('c')); // -1
 
 console.log(numbers.indexOf(3) !== -1); // gives true/false // its ugly
 console.log(numbers.includes('b')); // best way for the same requirement
+
+//Finding Elements in an array - Reference Types
+
+const courses = [
+    { id : 1, name: 'a'},
+    { id : 2, name: 'b'},
+];
+
+//console.log ( courses.includes('a')); // it will return false, bcz it is not a primitive type, use following approach
+
+const course = courses.find(function (course){
+    return course.name === 'a';
+    });
+
+console.log(course);
+
+// to check the index of reference type
+
+const courseFind = courses.findIndex(function (indexCourse){
+    return indexCourse.name === 'b'
+});
+
+console.log(courseFind);
