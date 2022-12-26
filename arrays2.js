@@ -65,9 +65,17 @@ console.log(courses);
 const allValuesPositive = numbers.every(value => value >= 0);
 console.log(allValuesPositive);
 
-numbers.push (-1, 8);
-console.log(numbers);
+numbers.splice (1, 0 , -1);
+console.log(numbers); //  [1, -1, 2, 3, 4]
 
 const atLeastOnePositive = numbers.some(value => value >= 0);
 
 console.log(atLeastOnePositive);
+
+
+// Filtering the Arrays
+// numbers = [1, -1, 2, 3, 4]
+
+const filtered = numbers.filter(value => value >= 0);
+
+console.log('Filtered positive numbers are',filtered);
