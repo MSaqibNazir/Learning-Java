@@ -316,14 +316,28 @@ console.log (post);
 
 //Exercise 5- Constructor Functions
 
-function Post (title, body, author, views, comments, isLive){
+function Post (title, body, author){
     this.title = title;
     this.body = body;
     this.author = author;
-    this.views = views;
-    this.comments = comments;
-    this.isLive = isLive;
+    this.views = 0;
+    this.comments = [];
+    this.isLive = false;
 }
 
-let myPost1 = new Post('a', 'b', 'c', 30, 'd', false);
+let myPost1 = new Post('a', 'b', 'c');
 console.log(myPost1);
+
+//=======================================
+
+//Exercise 6 - Price Range Object
+
+let priceRange = [
+    { label: '$', tooltip: 'Inexpesive', minPerPerson : 0, maxPerPerson : 10 }
+    { label: '$$', tooltip: 'Moderate', minPerPerson : 11, maxPerPerson : 20 }
+    { label: '$$$', tooltip: 'Expesive', minPerPerson : 21, maxPerPerson : 50 }
+]
+
+let restaurants = [
+    {averagePerPerson : 5}
+]
