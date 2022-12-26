@@ -160,3 +160,12 @@ console.log(defSlice);
 
 const compSplice = conP.splice(3)
 console.log(conP)
+
+
+// Spread Operator
+
+const spreadCombine = [...first , ...second]
+console.log(spreadCombine)
+
+const copy = [...spreadCombine]
+console.log(copy);
