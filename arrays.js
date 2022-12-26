@@ -33,7 +33,7 @@ console.log(numbers.indexOf('c')); // -1
 // to get boolean answer
 
 console.log(numbers.indexOf(3) !== -1); // gives true/false // its ugly
-console.log(numbers.includes('b')); // best way for the same requirement
+console.log(numbers.includes('b')); // gives true /false // best way for the same requirement
 
 //Finding Elements in an array - Reference Types
 
@@ -52,8 +52,24 @@ console.log(course);
 
 // to check the index of reference type
 
-const courseFind = courses.findIndex(function (indexCourse){
-    return indexCourse.name === 'b'
-});
-
+const courseFind = courses.findIndex(function (course){
+    return course.name === 'a'
+})
 console.log(courseFind);
+
+
+
+// Arrow Function
+
+// jub kisi method mein callup function lgyga to es6 k mutabiq hm arrow function lgayngy
+// function ko remove kren , parameter k bad => lgayn
+// agar single parameter hai us k brackets b hta den or return ko b hta den
+// statement agr ek line ki hai to brackets hta den
+const courseShort = courses.find(course => course.name === 'a');
+// ============================= course goes to name of course equal to a
+
+console.log(courseShort);
+
+const courseFind2 = courses.findIndex(course => course.id === 2)
+console.log(courseFind2);
+
