@@ -2,7 +2,7 @@
 
 //  for of loop
 
-const numbers = [1,2,3,4]
+// const numbers = [1,-1,2,3,4]
 
 // for (let number of numbers)
     // console.log(number) 
@@ -60,15 +60,15 @@ courses.sort( function (a, b){
 // testing the elements of an array
 
 
-// numbers = [1,2,3,4];
+numbA = [1,2,3,4];
 
-const allValuesPositive = numbers.every(value => value >= 0);
+const allValuesPositive = numbA.every(value => value >= 0);
 // console.log(allValuesPositive);
 
-numbers.splice (1, 0 , -1);
+numbA.splice (1, 0 , -1);
 // console.log(numbers); //  [1, -1, 2, 3, 4]
 
-const atLeastOnePositive = numbers.some(value => value >= 0);
+const atLeastOnePositive = numbA.some(value => value >= 0);
 
 // console.log(atLeastOnePositive);
 
@@ -76,7 +76,7 @@ const atLeastOnePositive = numbers.some(value => value >= 0);
 // Filtering the Arrays
 // numbers = [1, -1, 2, 3, 4]
 
-const filtered = numbers.filter(n => n >= 0);
+// const filtered = numbers.filter(n => n >= 0);
 //.......................filter number where number is greater than 0
 
 // console.log('Filtered positive numbers are',filtered);
@@ -85,17 +85,26 @@ const filtered = numbers.filter(n => n >= 0);
 
 
 //MAPPING AN ARRAY
+// using map we can map each element of an array in to something else
 
 // let numbers = [1, -1, 2, 3, 4]
-// const filtered = numbers.filter(n => n >= 0);
+// const filtered = numbers.filter(n => n >= 0); we have an array of ppositive numbers
 
-// to map elements of an array inn in something
+// construct an html  markup using the elements in this array
+// n = number
+// map this in to html markup
 
-const items = filtered.map(n => '<li>' + n + '</li>');
-
+// const items = filtered.map(n => '<li>' + n + '</li>');
 // console.log (items)
+// each number is mapped in string
 
-let html = '<ul>' + items.join('') + '</ul>'
+// to put this in ul element  we set this array in const i.e items
+
+// agar join() lgauga ,, to default mein har element k baad , ayega it is called separator
+// agr.. join('') lgauga,, to har element k bad empty space ajyag
+// similarly mein join ('-') jo lggauga,,, wo elementd k beecg mein ajhayga
+
+// const html = '<ul>' + items.join('') + '</ul>'
 
 // console.log(html);
 
@@ -103,15 +112,32 @@ let html = '<ul>' + items.join('') + '</ul>'
 
 
 
-////// if i want to map an object in array,, do this
+////// we can also map the elements of an array in objects
 
-// let numbers = [1, -1, 2, 3, 4]
+let numbers = [10, -1, 15, 4, 9]
 
-// const filtered = numbers.filter( n => n >= 0);
+const filtered = numbers.filter( n => n >= 0); // an array of positive integers
 
-// const value2 = filtered.map(n => ({ value : n}))
-filtered.map(function (value){
-    const obj : {value2 = n}
-})
+// const items = filtered.map( n => {
+//     // const obj = {value : n}; 
+//     // return obj; // yahan sy return hta dengy qk obj ki need ni hai. jutst object he return karaana hai to is liye just return use krna
 
-console.log(value2);
+//     return { value : n };
+// });
+
+//shorter ways is as under
+
+const items = filtered.map ( n => ({value : n}));  // arrow function k liye object ko paranthesis mein rkhna hota ha
+
+// these methods are chainable, which means we can call one after another in a chain
+
+// console.log(items); 
+
+// chaining mehtods
+const shortItems = numbers
+    .filter( n => n >= 0)
+    .map(n => ({value : n})) // here map is creating a new array so we can use filter again on it
+    .filter( obj => obj.value >= 10) // it will filter and give you the values which are greater than 10
+    .map ( obj => obj.value );
+
+console.log(shortItems);
