@@ -18,24 +18,24 @@ const numbers = [1,2,3,4]
 const alphabets = [1,2,3,4];
 
 const joined = alphabets.join(',');
-console.log (joined);
+// console.log (joined);
 
 const message = 'This is my first message.'
 const parts = message.split(' ');
-console.log(parts);
+// console.log(parts);
 
 const joinedParts = parts.join('-')
-console.log(joinedParts); // it isused for Url Slugs
+// console.log(joinedParts); // it isused for Url Slugs
 
 
 // Sorting Arrays
 const number = [2, 3, 1];
 
 number.sort()
-console.log(number);
+// console.log(number);
 
 number.reverse()
-console.log(number);
+// console.log(number); 
 
 const courses = [
     { id : 1, name : 'Node.js' },
@@ -55,7 +55,7 @@ courses.sort( function (a, b){
     return 0;
 
 })
-console.log(courses);
+// console.log(courses);
 
 // testing the elements of an array
 
@@ -63,19 +63,55 @@ console.log(courses);
 // numbers = [1,2,3,4];
 
 const allValuesPositive = numbers.every(value => value >= 0);
-console.log(allValuesPositive);
+// console.log(allValuesPositive);
 
 numbers.splice (1, 0 , -1);
-console.log(numbers); //  [1, -1, 2, 3, 4]
+// console.log(numbers); //  [1, -1, 2, 3, 4]
 
 const atLeastOnePositive = numbers.some(value => value >= 0);
 
-console.log(atLeastOnePositive);
+// console.log(atLeastOnePositive);
 
 
 // Filtering the Arrays
 // numbers = [1, -1, 2, 3, 4]
 
-const filtered = numbers.filter(value => value >= 0);
+const filtered = numbers.filter(n => n >= 0);
+//.......................filter number where number is greater than 0
 
-console.log('Filtered positive numbers are',filtered);
+// console.log('Filtered positive numbers are',filtered);
+
+///=======================================================================
+
+
+//MAPPING AN ARRAY
+
+// let numbers = [1, -1, 2, 3, 4]
+// const filtered = numbers.filter(n => n >= 0);
+
+// to map elements of an array inn in something
+
+const items = filtered.map(n => '<li>' + n + '</li>');
+
+// console.log (items)
+
+let html = '<ul>' + items.join('') + '</ul>'
+
+// console.log(html);
+
+
+
+
+
+////// if i want to map an object in array,, do this
+
+// let numbers = [1, -1, 2, 3, 4]
+
+// const filtered = numbers.filter( n => n >= 0);
+
+// const value2 = filtered.map(n => ({ value : n}))
+filtered.map(function (value){
+    const obj : {value2 = n}
+})
+
+console.log(value2);
