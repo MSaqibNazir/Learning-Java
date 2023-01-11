@@ -173,4 +173,4 @@ const smartSum = numbR.reduce(
 // a = 0, c = 2 => a = 2
 // a = 2, c = 3 => a = 5
 
-console.log(smartSum)
+// console.log(smartSum)
