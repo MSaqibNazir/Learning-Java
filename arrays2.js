@@ -138,6 +138,39 @@ const shortItems = numbers
     .filter( n => n >= 0)
     .map(n => ({value : n})) // here map is creating a new array so we can use filter again on it
     .filter( obj => obj.value >= 10) // it will filter and give you the values which are greater than 10
-    .map ( obj => obj.value );
+    .map ( obj => obj.value ); // map each object to the number, read the value property and return it
 
-console.log(shortItems);
+
+// console.log(shortItems);
+
+//=========================================================
+/// Reducing an array ///
+
+const numbR = [1, -1, 2, 3]; 
+// sum of all numbers in an array
+// it is similar to calculate the total cost in the shopping cart
+
+//old way
+
+let sum = 0;
+
+for ( let n of numbR)
+    sum += n;
+
+    // console.log(sum);
+
+// Smarter Way
+
+const smartSum = numbR.reduce( 
+    (resultSum , currentValue) => resultSum + currentValue, 0
+);
+ // if we not pass the second argument,, it will by default start with 1
+
+
+// it will be like on each call
+// a = 0, c = 1 => a = 1
+// a = 1, c = -1 => a = 0
+// a = 0, c = 2 => a = 2
+// a = 2, c = 3 => a = 5
+
+console.log(smartSum)
