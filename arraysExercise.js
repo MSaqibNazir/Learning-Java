@@ -21,7 +21,7 @@ function arrayFromRange( min, max ){
 const numbI = [1,2,3,4];
 
 
-console.log(includes(numbI,5));
+// console.log(includes(numbI,5));
 
 function includes(array, searchElement){
     for ( n of array) 
@@ -30,4 +30,24 @@ function includes(array, searchElement){
         
     return false;
     
+}
+
+
+// Exercise3 - Except
+//=============================================================
+
+const numbE = [ 1, 3, 5, 7, 1, 1 ];
+
+
+console.log(except(numbE, [1,3]));
+
+function except ( array, excluded ){
+    const output = [];
+
+    for ( let element of array )
+    
+    if ( !excluded.includes(element) )
+        output.push(element);
+    
+    return output;
 }
