@@ -110,7 +110,7 @@ return accumulator + occurrence;
  // Exercise6 - Get Max
  //=============================================================
 
-const numbG = [1,2,3,4];
+const numbG = [1,3,11,1];
 
 const max = getMax(numbG);
 
@@ -119,11 +119,22 @@ console.log(max);
 function getMax(array){
     if (array.length === 0) return undefined;
 
-    let max = array[0];// let the first value of this array is maximum
+    // let max = array[0];// let the first value of this array is maximum
     
-    for ( let i = 0; i < array.length; i++)
-        if (array[i] > max)
-            max = array[i]
-    return max
-   
-}
+    // for ( let i = 0; i < array.length; i++)
+    //     if (array[i] > max)
+    //         max = array[i];
+
+    // return max;
+
+    // lets try this using reduce method
+
+    return array.reduce((a, b) => (a > b) ? a : b); 
+    // a == accumulator
+    // b == current value
+    // 0 ni lgaya,, qk agar ni lgayngy, to accumulator by default set hojayga first value pr
+};
+
+
+
+
