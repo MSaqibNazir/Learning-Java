@@ -83,7 +83,7 @@ function move(array, index, offset){
 
 const count = countOccurrences(numbC, 1 );
 
-console.log(count);
+// console.log(count);
 
 function countOccurrences (array, searchElement){
 //     let counter = 0;
@@ -100,9 +100,30 @@ function countOccurrences (array, searchElement){
 return array.reduce((accumulator, current) => {
 const occurrence = (current === searchElement) ? 1 : 0;
 // to check whats ahppening
-console.log(accumulator, current, searchElement);
+// console.log(accumulator, current, searchElement);
 return accumulator + occurrence;
 }, 0);
 
  };
 
+
+ // Exercise6 - Get Max
+ //=============================================================
+
+const numbG = [1,2,3,4];
+
+const max = getMax(numbG);
+
+console.log(max);
+
+function getMax(array){
+    if (array.length === 0) return undefined;
+
+    let max = array[0];// let the first value of this array is maximum
+    
+    for ( let i = 0; i < array.length; i++)
+        if (array[i] > max)
+            max = array[i]
+    return max
+   
+}
