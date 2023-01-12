@@ -114,7 +114,7 @@ const numbG = [1,3,11,1];
 
 const max = getMax(numbG);
 
-console.log(max);
+// console.log(max);
 
 function getMax(array){
     if (array.length === 0) return undefined;
@@ -138,3 +138,28 @@ function getMax(array){
 
 
 
+// Exercise7 - Movies
+//=============================================================
+
+const movies = [
+    { title : 'a', year : 2018, ratings : 4.5 },
+    { title : 'b', year : 2018, ratings : 4.7 },
+    { title : 'c', year : 2018, ratings : 3 },
+    { title : 'd', year : 2017, ratings : 4.5 },
+];
+
+
+// All the movies in 2018 with rating > 4 /// filter 
+// Sort them by their rating //// sort
+// Descending Order
+// Pick their title
+
+
+const result = movies
+                        .filter(obj => obj.year === 2018 && obj.ratings >= 4 )
+                        .sort((a, b) => a.ratings - b.ratings )
+                        .reverse() // for descending orders
+                        .map(obj => obj.title)
+
+
+    // console.log(result);
