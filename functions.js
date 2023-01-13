@@ -42,13 +42,13 @@ function sum(){
 // REST Operators
 //==============//
 
-function sum (...args){           // accumulator // Current
+function sum (...args){   // a = accumulator // b = Current
     const total = args.reduce((a, b) => a + b );
     return total
 
 }
 
-console.log ( sum(1,2,3,2,54,2,5,56,2,46,5) );
+// console.log ( sum(1,2,3,2,54,2,5,56,2,46,5) );
 
 
 function sum (discount, ...prices){
@@ -56,7 +56,7 @@ function sum (discount, ...prices){
     return total * (1 - discount) // to make,,, 100 - 10 == 90% price
 }
 
-console.log ( sum(0.1, 100, 200, 500) ) // 10 percent discount
+// console.log ( sum(0.1, 100, 200, 500) ) // 10 percent discount
 
 // default parameter
 
@@ -64,7 +64,7 @@ function interest ( principal, rate, years){
     return principal * rate / 100 * years;
 }
 
-console.log(interest (10000, 4, 10));
+// console.log(interest (10000, 4, 10));
 
 function interest2 ( principal, rate, years){
     rate = rate || 4;
@@ -72,17 +72,67 @@ function interest2 ( principal, rate, years){
     return principal * rate / 100 * years;
 }
 
-console.log(interest2 (10000, 4, 10));
+// console.log(interest2 (10000, 4, 10));
 
 // acc to es6, we can set the value in parameter as well
 function interest3 ( principal, rate = 3.5, years = 5){
     return principal * rate / 100 * years;
 }
 
-console.log(interest3 (10000));
+// console.log(interest3 (10000));
 
 function interest4 ( principal, rate = 3.5, years){
     return principal * rate / 100 * years;
 }
 
-console.log(interest4 (10000, undefined, 20));
+// console.log(interest4 (10000, undefined, 20));
+
+// ye ugly hai,,, is liye 3rd wala follow krna hai only
+// default parameter ko function mein last mein lana chahye ,, takky us k arguments mein msla na ho
+
+// done
+
+
+//Getters and Setters//===========================
+//=============================
+
+person = {
+     firstName : 'Saqib',
+     lastName : 'Nazeer',
+    //  fullName : function(){} // better and shorter and smarter way is this
+    get fullName (){ // it is read only, we cannot update its value from outside
+    return `${person.firstName} ${person.lastName}`
+    },
+    set fullName(value){
+        const parts = value.split(' ');
+        this.firstName = parts[0];
+        this.lastName = parts[1]
+    }
+};
+
+person.fullName = 'Mudassir Iqbal'
+
+// we use,
+// Getters => to access the properties of an object
+// Setters => to change or mutate that properstries which is selected with setter
+
+// console.log(`${person.firstName} ${person.lastName}`);
+// console.log(person);
+
+newMainPerson = {
+    name : 'Saleem',
+    nisbatName : 'Rizvi',
+    get completeName(){
+        return `${newMainPerson.name} ${newMainPerson.nisbatName}`
+    },
+
+    set completeName(value){
+        const  parts = value.split (' ')
+        this.name = parts[0];
+        this.nisbatName = parts[1];
+    }
+}
+
+newMainPerson.completeName = 'Saqib Naqshbandi'
+
+// console.log(newMainPerson);
