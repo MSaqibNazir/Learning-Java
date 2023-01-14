@@ -227,7 +227,49 @@ const audio = {
         this.tags.forEach ( function (tag){
             console.log(this.title, tag)
         }, this )
+    },
+
+    showTagsAnother ( ) {
+        // assign this to const so that it will reference the current object
+        const self = this;
+
+        this.tags.forEach ( function (tag){
+            console.log(self.title, tag)
+        })
+    }
+};
+
+// audio.showTags();
+// audio.showTagsAnother();
+
+
+// Changing this
+//=================================================================================================================================
+
+
+// self = this
+// calling bind method
+// using arrow function
+
+const blog = {
+    title : 'a',
+    posts : ['abc', 'xyz' , '123'],
+    showPosts () {
+        this.posts.forEach(post => {
+            console.log(this.title, post)
+        })
     }
 }
 
-audio.showTags()
+blog.showPosts();
+
+// function playAudio(a, b) {
+//     console.log(this);
+// }
+
+// playAudio.call({ name : 'Mosh'}, 1 ,2);
+// playAudio.apply({name : 'Saqib Nazeer'}, [1,2]);
+// // const fn = playAudio.bind({name : "Nazeer Ahmed"}) // it creats new function
+// playAudio.bind({name : 'Mudassir'})();
+
+// playAudio()
