@@ -136,3 +136,38 @@ newMainPerson = {
 newMainPerson.completeName = 'Saqib Naqshbandi'
 
 // console.log(newMainPerson);
+
+
+/// TRY CATCH ERROR HANDLING
+//===========================
+
+user = {
+    name : 'Saqib',
+    lastName : 'Nazeer',
+    set userName(value) {
+        if (typeof value !== "string" ) 
+        throw new Error ('Value is not a string.');
+        // jb throw use krty hein toye exception kehlata hai
+        // jab simple errror ko layngy to us ka mtlb error hoga,
+        // error alag cheez hai,,, exception alag cheez hai
+        // when we throw an exception, the lines after it wil not executed, jumps out of the mehtod / function
+        // and control will move to the catch block ... catch (e){}
+
+        const parts = value.split(' ');
+        if (parts.length !== 2){
+            throw new Error ('Please enter first name and last name.')
+        }
+
+        this.name = parts[0];
+        this.lastName = parts[1]
+    }
+};
+
+try{
+    user.userName = 'Saqib Sumaiya'
+}
+catch (e){
+    alert (e)
+}
+
+console.log(user);
