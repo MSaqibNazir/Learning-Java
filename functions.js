@@ -171,3 +171,63 @@ catch (e){
 }
 
 // console.log(user);
+
+// This Keyword
+//=================================================================================================================================
+// what is this? this references the object that is excecuting the current function
+
+// if that function is part of an object we called that function a method
+
+// 1.. method -> object
+    // if that function is a method in an object. 
+        //this refrences that object itself
+
+// 2.. function -> global obj (window, global)
+    //  if that function is a regular function, it means it is not part of an object
+       // this refrences to the golbal object which is (window ) object in browser and (global) object in node
+ 
+
+
+//=============// 1.. method -> object // ================
+video = {
+    title : 'a',
+    play() { // method
+        // console.log(this); // refrences the object itself
+    }
+};
+
+video.stop = function (){
+    // console.log(this);
+}
+video.stop()
+
+
+
+//=============// 2.. function -> global obj (window, global) // ================
+
+function playVideo () {
+    // console.log(this); // it will give global object i.e Window
+}
+
+playVideo()
+
+function Video ( title , director ) {
+    this.title = title;
+    this.director = director;
+    // console.log(this);
+}
+
+const v = new Video ('saqib', 'mustafa')
+
+const audio = {
+    title : 'Saqib',
+    tags : ['a', 'b', 'c'],
+    showTags ( ) {
+        // this.tags.forEach( tag => console.log(tag))
+        this.tags.forEach ( function (tag){
+            console.log(this.title, tag)
+        }, this )
+    }
+}
+
+audio.showTags()
