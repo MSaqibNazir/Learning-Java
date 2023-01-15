@@ -261,7 +261,7 @@ const blog = {
     }
 }
 
-blog.showPosts();
+// blog.showPosts();
 
 // function playAudio(a, b) {
 //     console.log(this);
