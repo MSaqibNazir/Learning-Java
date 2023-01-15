@@ -274,16 +274,3 @@ const blog = {
 
 // playAudio()
 
-
-const number = [ 1, 2, 5, 3, 4, 5];
-
-const  count = countOccurence (number, 5)
-
-console.log(count);
-
-function countOccurence (array, searchedElement) {
-    return array.reduce (( accumulator, current ) => {
-        const occurence = (current === searchedElement) ? 1 : 0
-        return accumulator + occurence;
-    })
-}
