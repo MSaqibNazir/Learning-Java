@@ -95,7 +95,7 @@ function getTotalx(){
 // array = [0,0,0,0,0]
 
 //  a =1
-
+// array = [0,0,0,0,0]
 // function findGreater(arr, array){
 // for (i=0; i<arr.length ; i++){
 //     array[arr[i]-1]++
@@ -126,23 +126,78 @@ function getTotalx(){
 // console.log('Saqib bhai')
 
 
-arr = [5, 5, 2, 2, 3];
+// arr = [5, 5, 2, 2, 3];
 
-function migratoryBirds(arr){
-    arr = arr.sort();
-    let ans = arr[0];
-    let maxOccur = 1,
-        counter = 0;
+// function migratoryBirds(arr){
+//     arr = arr.sort();
+//     let ans = arr[0];
+//     let maxOccur = 1,
+//         counter = 0;
     
-    for (let i = 0; i < arr.length; i++) {
-        counter = (arr[i] === arr[i-1]) ? counter + 1 : 0;
-        if (counter > maxOccur) {
-            ans = arr[i];
-            maxOccur = counter;
-        }
-    }
+//     for (let i = 0; i < arr.length; i++) {
+//         counter = (arr[i] === arr[i-1]) ? counter + 1 : 0;
+//         if (counter > maxOccur) {
+//             ans = arr[i];
+//             maxOccur = counter;
+//         }
+//     }
+//     return ans;
+// }
 
-    return ans;
+// console.log(migratoryBirds(arr));
+
+
+
+// function migratoryBirds(ar) {
+//     const sortedArr = ar.sort()
+//     let uniqueVals = {};
+//     sortedArr.forEach(arValue => uniqueVals[arValue] = 0 ); //{1: 0, 2: 0, 3: 0, 4: 0} // yahan value kuch b rkh do
+//     // for (let key in uniqueVals) {
+//     //   sortedArr.forEach(x => x === parseInt(key) && uniqueVals[key]++); 
+//     // }
+//     let final = parseInt(Object.keys(uniqueVals).reduce((a, b) => uniqueVals[a] >= uniqueVals[b] ? a : b));
+//     return final;
+//   }
+  
+//   console.log(migratoryBirds([1, 1, 2, 3,3, 2, 2, 4]));
+
+
+
+
+
+// function migratoryBirds(arr) {
+    
+    //     let counts = [0,0,0,0,0,0]
+    
+    //     for (i=0; i<arr.length ; i++){
+        //         counts[arr[i]]++;
+        //     }
+        //     console.log('Count Array', counts);  // [0, 2, 10, 10, 4, 0]
+        
+        //     let maxed =  Math.max(...counts) // 10
+        //         console.log('maxed', maxed);
+        
+        
+        //     const type = counts.findIndex(typeCount => typeCount === (10));
+        //         console.log('type', type);
+        
+        
+        //     // return birds;
+        
+        // }
+        
+        console.log(migratoryBirds([1,2,2, 4,4]));
+
+
+function migratoryBirds(arr) {
+
+     let counts = [0,0,0,0,0,0];
+
+     for (let i = 0; i <arr.length; i++)
+        counts[arr[i]]++;
+
+     let max = Math.max(...counts);
+     
+     return counts.findIndex( typeCount => typeCount === max )
+
 }
-
-console.log(migratoryBirds(arr));
