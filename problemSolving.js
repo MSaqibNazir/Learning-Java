@@ -33,20 +33,58 @@ function getTotalx(){
 // return x = ?
 
 
-let s = [2,2,1,3,2];
-let d = 4;
-let m = 2;
+// let s = [2,2,1,3,2];
+// let d = 4;
+// let m = 2;
 
-const hacker = getWays(s,d,m)
-console.log ( hacker )
+// const hacker = getWays(s,d,m)
+// console.log ( hacker )
 
 
-function getWays(s, d, m){
-   let i = 0;
-   let j = m;
-   let count = 0;
+// function birthday(s, d, m) {
+    
+//     let partsOfChocolate = 0;
+//     for (let i = 0; i < s.length - (m - 1); i++){
+//         let subArraySum = 0;
+        
+//         for (let j = i; j < i + m; j++){
+//             subArraySum += s[j];
+//         }
+//         if (subArraySum === d)
+//             partsOfChocolate++
+//     }
+//     return partsOfChocolate;
+// }
 
-   for( let i = 0; i < m; i++){
-    console.log (s[i])
-   }
+
+
+// Given an array of integers and a positive integer k , determine 
+// the number of (i , j) pairs where i < j and ar[i] + ar[j]  is divisible by k.
+
+const ar= [1,3,2,6,1,2];
+const k = 3;
+let n = ar.length;
+
+// divisibleSumPairs(n, k, ar)
+
+// function divisibleSumPairs(n, k, ar) {
+//     let pairsCount = 0;
+    
+   
+    
+
+// }
+
+
+const prob = function divisibleSumPairs(n, k, ar) {
+    var countOfPairs = 0
+
+    for( let j = 0; j < n - 1; j++){
+        for (let i = j + 1; i < n ; i++)
+            if((ar[i] + ar[j]) % k === 0)
+                countOfPairs++;
 }
+return countOfPairs;
+}
+
+console.log(prob)
