@@ -86,118 +86,60 @@ function getTotalx(){
 //a bird type id, determine the id of the most frequently sighted type. 
 //If more than 1 type has been spotted that maximum amount, return the 
 //smallest of their ids.
+        
+        
+// console.log(migratoryBirds([1,2,2, 4,4]));
 
+// function migratoryBirds(arr) {
 
-// console.log('Mudassir bhai')
+//      let counts = [0,0,0,0,0,0];
 
-//{ arr  = [1 ,2, 3, 4, 5, 4, 3, 2, 1, 3,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2, 4]
+//      for (let i = 0; i <arr.length; i++)
+//         counts[arr[i]]++;
 
-// array = [0,0,0,0,0]
-
-//  a =1
-// array = [0,0,0,0,0]
-// function findGreater(arr, array){
-// for (i=0; i<arr.length ; i++){
-//     array[arr[i]-1]++
-// }
-
-// var maximumValue = array[0]
-
-
-// console.log("array",array)
-// for(i=1; i<5; i++){
-// console.log( maximumValue, array[i],)
-//     if(maximumValue < array[i]){
-//        console.log("CHECKKK",   maximumValue,array[i],)
-//         maximumValue == array[i+1]
-//        a = i
-//     }
-// }
-
-//     return a;
-// }
-
-
-// console.log(findGreater(arr, array))
+//      let max = Math.max(...counts);
+     
+//      return counts.findIndex( typeCount => typeCount === max )
 
 // };
 
 
-// console.log('Saqib bhai')
+// Hacker Rank - Diagonal Difference
+//=====================================================================
 
 
-// arr = [5, 5, 2, 2, 3];
+let arr = [ [ 11, 2, 4 ], [ 4, 5, 6 ], [ 10, 8, -12 ] ]
 
-// function migratoryBirds(arr){
-//     arr = arr.sort();
-//     let ans = arr[0];
-//     let maxOccur = 1,
-//         counter = 0;
+
+// function diagonalDifference (arr){
+    // let line1 = arr[0];
+    // let line2 = arr[1];
+    // let line3 = arr[2];
     
-//     for (let i = 0; i < arr.length; i++) {
-//         counter = (arr[i] === arr[i-1]) ? counter + 1 : 0;
-//         if (counter > maxOccur) {
-//             ans = arr[i];
-//             maxOccur = counter;
-//         }
-//     }
-//     return ans;
-// }
-
-// console.log(migratoryBirds(arr));
-
-
-
-// function migratoryBirds(ar) {
-//     const sortedArr = ar.sort()
-//     let uniqueVals = {};
-//     sortedArr.forEach(arValue => uniqueVals[arValue] = 0 ); //{1: 0, 2: 0, 3: 0, 4: 0} // yahan value kuch b rkh do
-//     // for (let key in uniqueVals) {
-//     //   sortedArr.forEach(x => x === parseInt(key) && uniqueVals[key]++); 
-//     // }
-//     let final = parseInt(Object.keys(uniqueVals).reduce((a, b) => uniqueVals[a] >= uniqueVals[b] ? a : b));
-//     return final;
-//   }
-  
-//   console.log(migratoryBirds([1, 1, 2, 3,3, 2, 2, 4]));
-
-
-
-
-
-// function migratoryBirds(arr) {
+    // let rightDiagonal = line1[0] + line2[1] + line3[2]
+    // let leftDiagonal = line1[2] + line2[1] + line3[0]
+    // 
+    // return Math.abs ( rightDiagonal - leftDiagonal )
+    // }
     
-    //     let counts = [0,0,0,0,0,0]
     
-    //     for (i=0; i<arr.length ; i++){
-        //         counts[arr[i]]++;
-        //     }
-        //     console.log('Count Array', counts);  // [0, 2, 10, 10, 4, 0]
-        
-        //     let maxed =  Math.max(...counts) // 10
-        //         console.log('maxed', maxed);
-        
-        
-        //     const type = counts.findIndex(typeCount => typeCount === (10));
-        //         console.log('type', type);
-        
-        
-        //     // return birds;
-        
-        // }
-        
-        console.log(migratoryBirds([1,2,2, 4,4]));
+    // 4
+    arr = [[-1, 1, -7, -8], [-10, -8, -5, -2], [0, 9, 7, -1], [4, 4, -2, 1]]
 
+    console.log(diagonalDifference(arr));
 
-function migratoryBirds(arr) {
+function diagonalDifference(arr) {
+    
+let rightDiagonal = 0;
+let leftDiagonal = 0;
+    for(let i = 0; i<arr.length; i++) {
+        
+        rightDiagonal += arr[i][i]; // -1 === -1, -8, 7 , 1 = 
 
-     let counts = [0,0,0,0,0,0];
+        leftDiagonal += arr[i][arr.length - i - 1]; // 0 === -8, -5, 9, 4
+        
+        // arr[i][n-i-1]
+    }
+ return Math.abs(rightDiagonal - leftDiagonal);
 
-     for (let i = 0; i <arr.length; i++)
-        counts[arr[i]]++;
-
-     let max = Math.max(...counts);
-     
-     return counts.findIndex( typeCount => typeCount === max )
-
-}
+};
