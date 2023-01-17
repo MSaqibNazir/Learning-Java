@@ -149,21 +149,21 @@
 
 let b = [4, 6, 5,3 , 3, 1];
 
-console.log(pickingNumbers(b));
+// console.log(pickingNumbers(b));
 
 function pickingNumbers(b) {
 
-    let a = b.sort();
+    let sorted = a.sort();
     
     let currentArray = [];
     let startNumber = 0;
     let longestArrayLength = 0;
 
-    for ( let i = 0; i < a.length ; i++) {
-        let result = Math.abs(a[startNumber] - a[i])
+    for ( let i = 0; i < sorted.length ; i++) {
+        let result = Math.abs(sorted[startNumber] - sorted[i])
         
         if( result <= 1){
-            currentArray.push(a[i])
+            currentArray.push(sorted[i])
 
             if(currentArray.length > longestArrayLength)
             longestArrayLength = currentArray.length;
@@ -175,45 +175,37 @@ function pickingNumbers(b) {
             longestArrayLength = currentArray.length;
 
             currentArray = []
-            currentArray.push(a[i])
+            currentArray.push(sorted[i])
 
         }
     }
     return longestArrayLength;
 
+};
+
+
+// HackerRank - CamelCase
+
+let s = 'oneTwoThree';
+
+console.log(camelCase(s));
+
+function camelCase(s) {
+    let s2 = s.toLowerCase();
+    let result = "";
+    
+    for ( let i = 0; i < s.length ; i++){
+        if( s[i] !== s2[i]){
+            result = result + " " + s[i]
+            // console.log(result);
+        } else {
+            result = result + s2[i];
+
+        }
+    } 
+    // console.log(result);  // one Two Three
+
+    const words = result.split(' ')
+    return words.length
 }
 
-
-
-
-
-// let a = b.sort();
-
-// let currentArray = [];
-// let startNumber = 0;
-// let longestArrayLength = 0;
-
-
-// for ( let i = 0; i < a.length; i++ ){
-//     let result = Math.abs(a[startNumber] - a[i])
-    
-//     if ( result <= 1 ) {
-//         currentArray.push (a[i])
-        
-//         if( currentArray.length > longestArrayLength )
-//             longestArrayLength = currentArray.length;
-
-//     } 
-//     else {
-//         startNumber = i;
-        
-//         if( currentArray.length > longestArrayLength )
-//             longestArrayLength = currentArray.length;
-
-//             currentArray = [];
-        
-//             currentArray.push(a[i]);
-            
-//     }
-// };
-// return longestArrayLength;
