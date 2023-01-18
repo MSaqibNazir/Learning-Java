@@ -188,7 +188,7 @@ function pickingNumbers(b) {
 
 let s = 'oneTwoThree';
 
-console.log(camelCase(s));
+// console.log(camelCase(s));
 
 function camelCase(s) {
     let s2 = s.toLowerCase();
@@ -206,6 +206,50 @@ function camelCase(s) {
     // console.log(result);  // one Two Three
 
     const words = result.split(' ')
-    return words.length
+    return words.length;
 }
 
+// HackerRank - Strong Password
+
+
+// password will be strong if:
+//===========================================================================
+// atleast 1 number !=== count 1
+// atleast 1 lowercase aphabet !=== count 2
+// atleast 1 uppercase alphabet !=== count 3
+// atleast 1 special character !@#$%^&*()-+ !=== count 4
+
+// password.length === 6
+
+let password = 'aaaaa';
+let n = password.length;
+
+console.log(minimumNumber (n, password));
+
+function minimumNumber (n, password){
+
+    let numbers = /[0123456789]/;
+    let lower_case = /[abcdefghijklmnopqrstuvwxyz]/;
+    let upper_case = /[ABCDEFGHIJKLMNOPQRSTUVWXYZ]/;
+    let special_characters = /[!@#$%^&*()--+]/;
+    let minCharacter = 6;
+    
+    let requiredChar = 0;
+
+    if (!numbers.test(password)) requiredChar++;
+    if (!lower_case.test(password)) requiredChar++;
+    if (!upper_case.test(password)) requiredChar++;
+    if (!special_characters.test(password)) requiredChar++;
+    
+
+    // return requiredChar;
+
+    if( n < minCharacter && (minCharacter - n) > requiredChar ){
+    return minCharacter - n
+    }
+
+    else {
+        return requiredChar
+    }
+    
+}
