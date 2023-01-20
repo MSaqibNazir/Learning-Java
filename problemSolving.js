@@ -147,7 +147,7 @@
 // HackerRank - Picking Numbers
 // =============================================================================================================================
 
-let b = [4, 6, 5,3 , 3, 1];
+// let b = [4, 6, 5,3 , 3, 1];
 
 // console.log(pickingNumbers(b));
 
@@ -224,7 +224,7 @@ function camelCase(s) {
 let password = 'aaaaa';
 let n = password.length;
 
-console.log(minimumNumber (n, password));
+// console.log(minimumNumber (n, password));
 
 function minimumNumber (n, password){
 
@@ -252,4 +252,210 @@ function minimumNumber (n, password){
         return requiredChar
     }
     
+}
+
+
+
+// let str = 'saaqiiiib';
+
+// let strParts = str.split('')
+// let newArray = []
+
+// for( let i = 0; i < strParts.length ; i++){
+//     // console.log(strParts[i])
+//     if (strParts[i] === 'a')
+//     newArray.push(strParts[i])
+
+// }
+// console.log(newArray.join(' '));
+
+
+// let a = "JACK";
+// let b = "DANIEL";
+
+// console.log(morganAndString(a, b));
+
+// function morganAndString ( a, b ) {
+    // let newString = "";
+
+    // if (a.length < b.length) {
+    //     for ( let i = 0; i < b.length ; i++){
+    //         // console.log(b[i]);
+
+    //         for ( let j = 0; j < a.length ; j++){
+    //             // console.log( b[i], a[j]);
+
+    //             if ( b[i] < a[j]){ 
+    //             newString = newString + b[i]
+    //             return newString
+    //             }
+    //         }
+    //     }
+    // }
+
+    // for ( let i = 0; i )
+
+//     a = a.split("");
+//     b = b.split("");
+  
+//     const aLen = a.length;
+//     const bLen = b.length;
+  
+//     let i = 0;
+//     let j = 0;
+//     let resultOutput = "";
+    
+//     console.log(tie(i, j, ));
+//     // Checks the next steps and returns how much should be cut from the winner array
+//     // Also stops counting if there are matches but they arn't equal to the initial character .
+//     function tie(_i, _j, char) {
+//         let result = "a";
+//         let loops = 0;
+//         let allEqual = true;
+//         console.log(result);
+//     }
+//     //   while (true) {
+//     //     _i++;
+//     //     _j++;
+//     //     if (allEqual) loops++;
+  
+//     //     if (_i > aLen) {
+//     //       result = "b";
+//     //       break;
+//     //     }
+//     //     if (_j > bLen) {
+//     //       result = "a";
+//     //       break;
+//     //     }
+//     //     const _a = a[_i];
+//     //     const _b = b[_j];
+//     //     if (_a < _b) {
+//     //       result = "a";
+//     //       break;
+//     //     }
+//     //     if (_a > _b) {
+//     //       result = "b";
+//     //       break;
+//     //     }
+//     //     if (_a !== char) allEqual = false;
+//     //   }
+      
+//     //   return { win: result, length: loops };
+      
+//     // }
+  
+    
+//     // while (true) {
+//     //   if (i >= aLen && j >= bLen) break;
+  
+//     //   const _a = a[i];
+//     //   const _b = b[j];
+  
+//     //   if (_a === _b) {
+//     //     const res = tie(i, j, _a);
+  
+//     //     if (res.win === "a") {
+//     //       resultOutput += a.slice(i, i + res.length).join("");
+//     //       i += res.length;
+//     //     } else {
+//     //       resultOutput += b.slice(j, j + res.length).join("");
+//     //       j += res.length;
+//     //     }
+//     //   } else if (_a < _b || !_b) {
+//     //     if (_a) {
+//     //       resultOutput += _a;
+//     //     }
+//     //     i++;
+//     //   } else if (_a > _b || !_a) {
+//     //     if (_b) {
+//     //       resultOutput += _b;
+//     //     }
+//     //     j++;
+//     //   }
+//     // }
+  
+//     // return resultOutput;
+// };
+
+
+// HackerRank - Morgan and a String
+// ====================================
+
+// let a = "JACK";
+// let b = "DANIEL";
+
+// console.log(morganAndString(a, b));
+
+function morganAndString(a, b) {
+
+
+    function* morgan(a, b) {
+ 
+        a += 'z'; 
+        b += 'z'; 
+        
+        function* range(n) {
+            let j = 0;
+            let i = 0;
+            while( i++ < n)
+                yield j++
+        };
+
+
+        // console.log(a, b);
+        for (let element of range(a.length + b.length - 2)){
+            console.log(a, b);
+
+            if (a < b) {  // J = 74 // D = 68
+                yield a[0]
+                a = a.substr(1)
+                
+            } 
+            else {
+                yield b[0]
+                b = b.substr(1)
+            }
+        }
+        
+    }
+let newArray = [...morgan(a,b)]
+    return newArray.join('')
+};
+
+let a = "JACK";
+let b = "DANIEL";
+
+
+console.log(morganAndStringSaqib(a, b));
+
+function morganAndStringSaqib ( a, b) {
+
+    function* morgan (a,b){
+        a += 'z'
+        b += 'z'
+
+        function* range (n){
+            let j = 0;
+            let i = 0
+            while ( i++ < n){
+                yield j++;
+            }
+        }
+
+        for ( let el of range( a.length + b.length - 2 )){
+            if ( a < b ){
+                yield a[0]
+                a = a.substr(1)
+            } else {
+                yield b[0]
+                b = b.substr(1)
+            }
+        }
+        
+    }
+
+    let resultArray = [...morgan( a, b )]
+    return resultArray.join('');
+
+
 }
