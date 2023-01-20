@@ -386,76 +386,138 @@ function minimumNumber (n, password){
 
 // console.log(morganAndString(a, b));
 
-function morganAndString(a, b) {
+// function morganAndString(a, b) {
 
 
-    function* morgan(a, b) {
+//     function* morgan(a, b) {
  
-        a += 'z'; 
-        b += 'z'; 
+//         a += 'z'; 
+//         b += 'z'; 
         
-        function* range(n) {
-            let j = 0;
-            let i = 0;
-            while( i++ < n)
-                yield j++
-        };
+//         function* range(n) {
+//             let j = 0;
+//             let i = 0;
+//             while( i++ < n)
+//                 yield j++
+//         };
 
 
-        // console.log(a, b);
-        for (let element of range(a.length + b.length - 2)){
-            console.log(a, b);
+//         // console.log(a, b);
+//         for (let element of range(a.length + b.length - 2)){
+//             console.log(a, b);
 
-            if (a < b) {  // J = 74 // D = 68
-                yield a[0]
-                a = a.substr(1)
+//             if (a < b) {  // J = 74 // D = 68
+//                 yield a[0]
+//                 a = a.substr(1)
                 
-            } 
-            else {
-                yield b[0]
-                b = b.substr(1)
-            }
-        }
+//             } 
+//             else {
+//                 yield b[0]
+//                 b = b.substr(1)
+//             }
+//         }
         
-    }
-let newArray = [...morgan(a,b)]
-    return newArray.join('')
-};
+//     }
+// let newArray = [...morgan(a,b)]
+//     return newArray.join('')
+// };
 
-let a = "JACK";
+// // let a = "JACK";
+// // let b = "DANIEL";
+
+
+// // console.log(morganAndStringSaqib(a, b));
+
+// function morganAndStringSaqib ( a, b) {
+
+//     function* morgan (a,b){
+//         a += 'z'
+//         b += 'z'
+
+//         function* range (n){
+//             let j = 0;
+//             let i = 0
+//             while ( i++ < n){
+//                 yield j++;
+//             }
+//         }
+
+//         for ( let el of range( a.length + b.length - 2 )){
+//             if ( a < b ){
+//                 yield a[0]
+//                 a = a.substr(1)
+//             } else {
+//                 yield b[0]
+//                 b = b.substr(1)
+//             }
+//         }
+        
+//     }
+
+//     let resultArray = [...morgan( a, b )]
+//     return resultArray.join('');
+
+
+// };
+
+let a = 'JACK'
 let b = "DANIEL";
+// console.log(morganAndStringShortEasy(a, b))
 
+function morganAndStringShortEasy(a, b) { 
 
-console.log(morganAndStringSaqib(a, b));
-
-function morganAndStringSaqib ( a, b) {
-
-    function* morgan (a,b){
-        a += 'z'
-        b += 'z'
-
-        function* range (n){
-            let j = 0;
-            let i = 0
-            while ( i++ < n){
-                yield j++;
+    var output = "";
+    cal(a,b);
+    
+    
+    function cal(a, b) {
+        if (a.length == 0 && b.length == 1)  {
+            for (i = 0; i < b.length; i++) {
+                output += b[i];
+            }
+        }
+        else if (b.length == 0) {
+            for (i = 0; i < a.length; i++) {
+                output += a[i];
             }
         }
 
-        for ( let el of range( a.length + b.length - 2 )){
-            if ( a < b ){
-                yield a[0]
-                a = a.substr(1)
-            } else {
-                yield b[0]
-                b = b.substr(1)
-            }
+        else if (a.length > 0 && a[0] <= b[0]) {
+            
+            output += a[0]
+            a = a.substr(1);
+            cal(a, b)
+        } else { 
+            output += b[0]
+            b = b.substr(1);
+            cal(a, b)
         }
-        
     }
-
-    let resultArray = [...morgan( a, b )]
-    return resultArray.join('');
-
+    
+    return output;
 
 }
+
+
+
+// HackerRank - Breaking Records 
+//================================
+
+let scores = [10, 5, 20, 20, 4, 5, 2, 25, 1];
+
+function breakRecords(scores) {
+    let h = [scores[0]];
+    let l = [scores[0]];
+
+    scores.forEach(e => {
+        if (e > h[h.length - 1])  h.push (e);
+        if (e < l[l.length - 1]) l.push (e);
+
+    });
+    
+    console.log(h);
+    console.log(l);
+    return [h.length - 1, l.length - 1]
+}
+
+console.log(breakRecords(scores));
