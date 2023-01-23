@@ -528,7 +528,7 @@ function morganAndStringShortEasy(a, b) {
 let year = 1917;
 // 1915 == 13
 
-console.log(dayOfProgrammer(year))
+// console.log(dayOfProgrammer(year))
 
 function dayOfProgrammer(year) {
 
@@ -559,7 +559,34 @@ function dayOfProgrammer(year) {
     else  if ( year >= 1917 ) {
         sumOfFirst8Months = 243;
         dd = 256 - sumOfFirst8Months;       
-    }
+    };
+
     date = `${dd}.09.${year}`;
     return (date);
-}
+};
+
+
+// HackerRank - Bill Division
+//==================================
+
+let bill = [ 3, 10, 2, 9];
+
+let k = 1
+b = 12
+// console.log(bill [k]);
+bill.splice (k, 1)
+
+const sum = bill.reduce((a,b) => a+b)
+
+// console.log(sum);
+
+const amount = sum/2
+// console.log(amount);
+
+if ( amount === b ){
+    console.log('Bon Appetit');
+} else {
+    console.log(b - amount);
+};
+
+
