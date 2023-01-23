@@ -221,8 +221,8 @@ function camelCase(s) {
 
 // password.length === 6
 
-let password = 'aaaaa';
-let n = password.length;
+// let password = 'aaaaa';
+// let n = password.length;
 
 // console.log(minimumNumber (n, password));
 
@@ -569,24 +569,41 @@ function dayOfProgrammer(year) {
 // HackerRank - Bill Division
 //==================================
 
-let bill = [ 3, 10, 2, 9];
+// let bill = [ 3, 10, 2, 9];
 
-let k = 1
-b = 12
-// console.log(bill [k]);
-bill.splice (k, 1)
+// let k = 1
+// b = 12
+// // console.log(bill [k]);
+// bill.splice (k, 1)
 
-const sum = bill.reduce((a,b) => a+b)
+// const sum = bill.reduce((a,b) => a+b)
 
-// console.log(sum);
+// // console.log(sum);
 
-const amount = sum/2
-// console.log(amount);
+// const amount = sum/2
+// // console.log(amount);
 
-if ( amount === b ){
-    console.log('Bon Appetit');
-} else {
-    console.log(b - amount);
-};
+// if ( amount === b ){
+//     console.log('Bon Appetit');
+// } else {
+//     console.log(b - amount);
+// };
 
 
+// HackerRank Ex - Sales by Match
+//================================
+
+let ar = [10, 20, 20, 10, 10, 30, 50, 10, 20]
+let n = ar.length;
+let newArray = [];
+ar.sort();
+
+var result = 0;
+
+    for(let i = 0; i < n ; i++){
+        if(ar[i] == ar[i+1]){
+            i++;
+                  result++;
+           }
+    }
+console.log(result);
