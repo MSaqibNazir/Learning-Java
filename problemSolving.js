@@ -503,21 +503,63 @@ function morganAndStringShortEasy(a, b) {
 // HackerRank - Breaking Records 
 //================================
 
-let scores = [10, 5, 20, 20, 4, 5, 2, 25, 1];
+// let scores = [10, 5, 20, 20, 4, 5, 2, 25, 1];
 
-function breakRecords(scores) {
-    let h = [scores[0]];
-    let l = [scores[0]];
+// function breakRecords(scores) {
+//     let h = [scores[0]];
+//     let l = [scores[0]];
 
-    scores.forEach(e => {
-        if (e > h[h.length - 1])  h.push (e);
-        if (e < l[l.length - 1]) l.push (e);
+//     scores.forEach(e => {
+//         if (e > h[h.length - 1])  h.push (e);
+//         if (e < l[l.length - 1]) l.push (e);
 
-    });
+//     });
     
-    console.log(h);
-    console.log(l);
-    return [h.length - 1, l.length - 1]
-}
+//     // console.log(h);
+//     // console.log(l);
+//     return [h.length - 1, l.length - 1]
+// }
 
-console.log(breakRecords(scores));
+// console.log(breakRecords(scores));
+
+// hackerRank - Day of the Programmer
+//==================================
+
+let year = 1917;
+// 1915 == 13
+
+console.log(dayOfProgrammer(year))
+
+function dayOfProgrammer(year) {
+
+    let sumOfFirst8Months = 0;
+    let dd = 0;
+    let date = '';
+    
+    if ( year < 1918 && year % 4 === 0 ){
+        
+        sumOfFirst8Months = 244;
+        dd = 256 - sumOfFirst8Months;
+    }
+    else if ( year < 1918 ){
+        
+        sumOfFirst8Months = 243;
+        dd = 256 - sumOfFirst8Months;
+        console.log(dd);
+    }
+    else if(year === 1918){
+        sumOfFirst8Months = 244 - 14;
+        dd = 256 - sumOfFirst8Months;
+    }
+    else if ( ( year >= 1917 ) && year % 400 === 0 || year % 4 === 0 && year % 100 !== 0 ){
+        
+        sumOfFirst8Months = 244;
+        dd = 256 - sumOfFirst8Months;      
+    }
+    else  if ( year >= 1917 ) {
+        sumOfFirst8Months = 243;
+        dd = 256 - sumOfFirst8Months;       
+    }
+    date = `${dd}.09.${year}`;
+    return (date);
+}
