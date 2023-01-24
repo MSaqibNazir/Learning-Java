@@ -593,17 +593,29 @@ function dayOfProgrammer(year) {
 // HackerRank Ex - Sales by Match
 //================================
 
-let ar = [10, 20, 20, 10, 10, 30, 50, 10, 20]
-let n = ar.length;
-let newArray = [];
-ar.sort();
+// let ar = [10, 20, 20, 10, 10, 30, 50, 10, 20]
+// let n = ar.length;
+// let newArray = [];
+// ar.sort();
+//     var pairsCount = 0;
+    
+//     for ( let i = 0; i < n; i++)
+//         if (ar[i] == ar[i+1]){
+//             i++;
+//             pairsCount++;
+//         }
+        
+    
+// console.log(pairsCount);
 
-var result = 0;
+// HackerRank Ex - Drawing Book
+//================================
 
-    for(let i = 0; i < n ; i++){
-        if(ar[i] == ar[i+1]){
-            i++;
-                  result++;
-           }
-    }
-console.log(result);
+
+let n = 6; // Number of pages
+let p = 2; // page number to turn to
+
+const totalTurns = Math.floor(n/2);
+const pageTurn = Math.floor(p/2);
+
+console.log(Math.min(totalTurns-pageTurn, pageTurn));
