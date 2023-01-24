@@ -460,9 +460,9 @@ function minimumNumber (n, password){
 
 // };
 
-let a = 'JACK'
-let b = "DANIEL";
-// console.log(morganAndStringShortEasy(a, b))
+// let a = 'JACK'
+// let b = "DANIEL";
+// // console.log(morganAndStringShortEasy(a, b))
 
 function morganAndStringShortEasy(a, b) { 
 
@@ -685,14 +685,59 @@ function countingValleys(steps, path) {
 // HackerRank Ex - Big Sorting
 //============================
 
+// when numbers are in string in array then use this technique
+
 let unsorted = ['1', '3', '10', '3', '5' ];
-let forSort = []
-for ( let i = 0; i < unsorted.length; i++) {
-    forSort.push(+unsorted[i]);
+
+
+// function bigSorting(unsorted) {
+//     return unsorted.sort((a, b)=> Number(BigInt(a)-BigInt(b)))
+// };
+
+
+// HackerRank Ex - Electronics Shop
+//=================================
+
+let b = 20;
+let keyboards = [4];
+let drives = [5];
+
+function getMoneySpent(keyboards, drives, b) {
+    let sum = [];
+for ( let i = 0; i < keyboards.length ; i++)
+    for ( let j = 0; j < drives.length ; j++){
+         let cost = keyboards[i] + drives[j];
+         if ( cost < b ) sum.push(cost)
+         
+        }
+        
+        if( sum.length === 0 ) {
+            return -1
+        }
+    
+        else  return Math.max(...sum);
 }
 
-forSort.sort((a,b) => a - b)
-let final = forSort.join(',')
-let fullFinal = final.split(',')
+// console.log(getMoneySpent(keyboards, drives, b));
 
-console.log(fullFinal);
+
+
+// HackerRank Ex - Cats and a Mouse
+// =================================
+
+console.log(catAndMouse(5,5,4));
+
+function catAndMouse(x, y, z) {
+
+    let catAdist = Math.abs(z - x);
+    let catBdist = Math.abs(z - y);
+
+    // console.log(catAdist, catBdist );
+
+    if ( catAdist > catBdist )
+    return 'Cat B'
+    else if ( catAdist < catBdist )
+    return 'Cat A'
+    else return "Mouse C"
+
+}
