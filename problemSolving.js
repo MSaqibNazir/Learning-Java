@@ -615,7 +615,52 @@ function dayOfProgrammer(year) {
 let n = 6; // Number of pages
 let p = 2; // page number to turn to
 
-const totalTurns = Math.floor(n/2);
-const pageTurn = Math.floor(p/2);
+const totalTurns = Math.floor(n/2); // 3
+const pageTurn = Math.floor(p/2); 
 
-console.log(Math.min(totalTurns-pageTurn, pageTurn));
+// console.log(Math.min(totalTurns-pageTurn, pageTurn));
+
+
+// HackerRank Ex - Counting Valleys
+//================================
+
+function countingValleys(steps, path) {
+    let currentLevel = 0;
+    let valleysCount = 0;
+    let seaLevel = 0;
+    
+    path = path.split('');
+    
+    for ( let i = 0; i < steps; i++){
+        if ( path[i] == "U"){
+            currentLevel++;
+            if ( currentLevel == seaLevel){
+                valleysCount++;
+            }
+        } else {
+            currentLevel--
+        }
+    }
+    return valleysCount;
+};
+
+// Traversing the matrix layer 
+//============================
+
+let mat = [
+            [ 1, 2, 3, 4],
+            [12, 'A', 'B', 5],
+            [11, 'C', 'D', 6],
+            [10, 9, 8, 7]
+        ];
+
+
+let l = [];
+
+let row = mat.length;
+let col = mat[0].length;
+let layer = Math.min( row, col ) / 2;
+
+for ( let i = 0; i < layer ; i++ ){
+    console.log(mat[0][i]);
+}
