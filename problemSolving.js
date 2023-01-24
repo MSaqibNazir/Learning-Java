@@ -648,36 +648,118 @@ function countingValleys(steps, path) {
 //============================
          //   i    i   i   i
          //   c    c   c   c
-let mat = [
-            [ 1,  2 ,  3 , 4],       // r = j
-            [12, 'A', 'B', 5],       // r = j
-            [11, 'D', 'C', 6],       // r = j 
-            [10,  9 ,  8 , 7]        // r = j
-        ];
+// let mat = [
+//             [ 1,  2 ,  3 , 4],       // r = j
+//             [12, 'A', 'B', 5],       // r = j
+//             [11, 'D', 'C', 6],       // r = j 
+//             [10,  9 ,  8 , 7]        // r = j
+//         ];
 
 
-let l = [];
-let tr = [];
+// let l = [];
+// let tr = [];
 
-let row = mat.length;
-let col = mat[0].length;
-let layer = Math.min( row, col ) / 2;
+// let row = mat.length;
+// let col = mat[0].length;
+// let layer = Math.min( row, col ) / 2;
 
-for ( let i = 0; i < layer ; i++ ){
-    l = [];
-    for ( let j = i ; j < row - i - 1; j++ ){
-        l.push (mat[i][j]);
+// for ( let i = 0; i < layer ; i++ ){
+//     l = [];
+//     for ( let j = i ; j < row - i - 1; j++ ){
+//         l.push (mat[i][j]);
+//     }
+//     for ( let j = i; j < col -i -1; j++){
+//         l.push (mat[j][col -i -1])
+//     }
+//     for ( let j = col -1 -i; j > i; j--){
+//         l.push (mat[row -1 -i][j])
+//     }
+//     for ( let j = row -1 -i; j >i; j--) {
+//         l.push ( mat[j][i])
+//     }
+//     tr.push(l)
+// }
+
+// console.log(tr);
+
+// HackerRank Ex - Matrix Layer Rotation
+// =====================================
+
+
+// rows = m 
+// columns = n
+// rotation = r
+
+
+let matrix = [
+              [ 1,  2,  3,  4],                      //index
+              [ 5,  6,  7,  8], // x * y..... in array [y]  [x]
+              [ 9, 10, 11, 12], 
+              [13, 14, 15, 16]
+            ];
+let r = 1;
+
+console.log(matrixRotation(matrix, r));
+
+
+function matrixRotation(matrix, r) {
+
+  const row = matrix.length;
+  const col = matrix[0].length;
+  const layer = Math.min(row, col) / 2;
+  const split = [];
+
+
+  for (let i = 0; i < layer; i++) {
+    const temp = [];
+    for (let j = i; j < col - i; j++) {
+      temp.push(matrix[i][j]);
     }
-    for ( let j = i; j < col -i -1; j++){
-        l.push (mat[j][col -i -1])
+    for (let j = i + 1; j < row - i; j++) {
+      temp.push(matrix[j][col - i - 1]);
     }
-    for ( let j = col -1 -i; j > i; j--){
-        l.push (mat[row -1 -i][j])
+    for (let j = col - i - 2; j >= i; j--) {
+      temp.push(matrix[row - i - 1][j]);
     }
-    for ( let j = row -1 -i; j >i; j--) {
-        l.push ( mat[j][i])
+    for (let j = row - i - 2; j > i; j--) {
+      temp.push(matrix[j][i]);
     }
-    tr.push(l)
+    split.push(temp);
+  }
+  // rotate
+  for (let i = 0; i < layer; i++) {
+    const temp = [];
+    for (let j = 0; j < split[i].length; j++) {
+      temp.push(split[i][(j + r) % split[i].length]);
+      console.log((j + r) % split[i].length);
+      
+    }
+    // split[i] = temp;
+  }
+// console.log(split);
+
+//   // merge
+//   for (let i = 0; i < layer; i++) {
+//     let index = 0;
+//     for (let j = i; j < col - i; j++) {
+//       matrix[i][j] = split[i][index++];
+//     }
+//     for (let j = i + 1; j < row - i; j++) {
+//       matrix[j][col - i - 1] = split[i][index++];
+//     }
+//     for (let j = col - i - 2; j >= i; j--) {
+//       matrix[row - i - 1][j] = split[i][index++];
+//     }
+//     for (let j = row - i - 2; j > i; j--) {
+//       matrix[j][i] = split[i][index++];
+//     }
+//   }
+
+//   for (let i = 0; i < row; i++) {
+//     let str = "";
+//     for (let j = 0; j < col; j++) {
+//       str += matrix[i][j] + " ";
+//     }
+//     console.log(str);
+//   }
 }
-
-console.log(tr);
