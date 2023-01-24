@@ -646,21 +646,38 @@ function countingValleys(steps, path) {
 
 // Traversing the matrix layer 
 //============================
-
+         //   i    i   i   i
+         //   c    c   c   c
 let mat = [
-            [ 1, 2, 3, 4],
-            [12, 'A', 'B', 5],
-            [11, 'C', 'D', 6],
-            [10, 9, 8, 7]
+            [ 1,  2 ,  3 , 4],       // r = j
+            [12, 'A', 'B', 5],       // r = j
+            [11, 'D', 'C', 6],       // r = j 
+            [10,  9 ,  8 , 7]        // r = j
         ];
 
 
 let l = [];
+let tr = [];
 
 let row = mat.length;
 let col = mat[0].length;
 let layer = Math.min( row, col ) / 2;
 
 for ( let i = 0; i < layer ; i++ ){
-    console.log(mat[0][i]);
+    l = [];
+    for ( let j = i ; j < row - i - 1; j++ ){
+        l.push (mat[i][j]);
+    }
+    for ( let j = i; j < col -i -1; j++){
+        l.push (mat[j][col -i -1])
+    }
+    for ( let j = col -1 -i; j > i; j--){
+        l.push (mat[row -1 -i][j])
+    }
+    for ( let j = row -1 -i; j >i; j--) {
+        l.push ( mat[j][i])
+    }
+    tr.push(l)
 }
+
+console.log(tr);
