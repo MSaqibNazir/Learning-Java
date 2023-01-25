@@ -725,19 +725,51 @@ for ( let i = 0; i < keyboards.length ; i++)
 // HackerRank Ex - Cats and a Mouse
 // =================================
 
-console.log(catAndMouse(5,5,4));
+// console.log(catAndMouse(5,5,4));
 
-function catAndMouse(x, y, z) {
+// function catAndMouse(x, y, z) {
 
-    let catAdist = Math.abs(z - x);
-    let catBdist = Math.abs(z - y);
+//     let catAdist = Math.abs(z - x);
+//     let catBdist = Math.abs(z - y);
 
-    // console.log(catAdist, catBdist );
+//     // console.log(catAdist, catBdist );
 
-    if ( catAdist > catBdist )
-    return 'Cat B'
-    else if ( catAdist < catBdist )
-    return 'Cat A'
-    else return "Mouse C"
+//     if ( catAdist > catBdist )
+//     return 'Cat B'
+//     else if ( catAdist < catBdist )
+//     return 'Cat A'
+//     else return "Mouse C"
 
+
+
+// }
+
+let h = [
+    1, 3, 1, 3, 1, 4, 1, 3,
+    2, 5, 5, 5, 5, 5, 5, 5,
+    5, 5, 5, 5, 5, 5, 5, 5,
+    5, 5
+  ]
+let word = 'abd'; // 9
+
+console.log(designerPdfViewer (h, word));
+function designerPdfViewer(h, word) {
+
+    let alphabets = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+    let wordIndex = [];
+
+    for ( let i = 0; i < word.length ; i++){  
+            wordIndex.push(alphabets.indexOf(word[i]));         
+        }
+        console.log(wordIndex);
+
+    let heightsEachLetter = [];
+
+    for ( let i = 0; i < wordIndex.length ; i++){
+        heightsEachLetter.push(h[wordIndex[i]]);
+        };
+    
+    return Math.max(...heightsEachLetter) * word.length;
 }
+
+
