@@ -612,11 +612,11 @@ function dayOfProgrammer(year) {
 //================================
 
 
-let n = 6; // Number of pages
-let p = 2; // page number to turn to
+// let n = 6; // Number of pages
+// let p = 2; // page number to turn to
 
-const totalTurns = Math.floor(n/2); // 3
-const pageTurn = Math.floor(p/2); 
+// const totalTurns = Math.floor(n/2); // 3
+// const pageTurn = Math.floor(p/2); 
 
 // console.log(Math.min(totalTurns-pageTurn, pageTurn));
 
@@ -744,15 +744,18 @@ for ( let i = 0; i < keyboards.length ; i++)
 
 // }
 
-let h = [
-    1, 3, 1, 3, 1, 4, 1, 3,
-    2, 5, 5, 5, 5, 5, 5, 5,
-    5, 5, 5, 5, 5, 5, 5, 5,
-    5, 5
-  ]
-let word = 'abd'; // 9
+// HackerRank Ex - Designer PDF Viewer
+// ===================================
 
-console.log(designerPdfViewer (h, word));
+// let h = [
+//     1, 3, 1, 3, 1, 4, 1, 3,
+//     2, 5, 5, 5, 5, 5, 5, 5,
+//     5, 5, 5, 5, 5, 5, 5, 5,
+//     5, 5
+//   ]
+// let word = 'abd'; // 9
+
+// console.log(designerPdfViewer (h, word));
 function designerPdfViewer(h, word) {
 
     let alphabets = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
@@ -772,4 +775,23 @@ function designerPdfViewer(h, word) {
     return Math.max(...heightsEachLetter) * word.length;
 }
 
+// HackerRank Ex - Find Digits
+// ===========================
 
+let n = 10;
+
+console.log(findDigits(n));
+
+// console.log(n);
+function findDigits(n) {
+    let nn= n.toString().split('')
+    let count = 0
+    
+    for ( let i = 0; i <= nn.length; i++){
+        if (n % nn[i] == 0){
+            count++; 
+            
+        }
+    }
+    return count
+};
