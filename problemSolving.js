@@ -646,8 +646,8 @@ function countingValleys(steps, path) {
 
 // Traversing the matrix layer 
 //============================
-         //   i    i   i   i
-         //   c    c   c   c
+            //   i    i   i   i
+            //   c    c   c   c
 // let mat = [
 //             [ 1,  2 ,  3 , 4],       // r = j
 //             [12, 'A', 'B', 5],       // r = j
@@ -698,9 +698,9 @@ let unsorted = ['1', '3', '10', '3', '5' ];
 // HackerRank Ex - Electronics Shop
 //=================================
 
-let b = 20;
-let keyboards = [4];
-let drives = [5];
+// let b = 20;
+// let keyboards = [4];
+// let drives = [5];
 
 function getMoneySpent(keyboards, drives, b) {
     let sum = [];
@@ -778,9 +778,9 @@ function designerPdfViewer(h, word) {
 // HackerRank Ex - Find Digits
 // ===========================
 
-let n = 10;
+// let n = 10;
 
-console.log(findDigits(n));
+// console.log(findDigits(n));
 
 // console.log(n);
 function findDigits(n) {
@@ -795,3 +795,47 @@ function findDigits(n) {
     }
     return count
 };
+
+
+// HackerRank Ex - Climbing the Leaderboard
+// ========================================
+
+let ranked = [100,90,90,80];
+let player = [40,90,105];
+
+
+// console.log(climbingLeaderboard(ranked, player));
+
+function climbingLeaderboard(ranked, player) {
+    const ranks = [...new Set(ranked)];
+    console.log(ranks);
+    // const result = [];
+    // let j = ranks.length - 1;
+  
+    // for (let i in player) {
+    //   while (ranks[j] <= player[i]) {
+    //     j--;
+    //   }
+      
+    //   result.push(j + 2);
+    // }
+  
+    // return result;
+}
+
+
+// HackerRank Ex - Two Strings
+// ===========================
+
+let s1 = 'abc';
+let s2 = 'world';
+
+let a = new Set(s1);
+    let b = new Set(s2);
+
+    for (const letter of b) {
+        if (a.has(letter)) {
+            console.log("YES");
+        }
+    }
+    console.log("NO");
