@@ -838,4 +838,104 @@ let a = new Set(s1);
             console.log("YES");
         }
     }
-    console.log("NO");
+    // console.log("NO");
+
+
+// HackerRank Ex - Triple sum
+// ==========================
+
+// a = [1,4,5];
+// b = [2,3,3];
+// c = [1,2,3];
+
+// a = [...new Set (a)].sort();
+// b = [...new Set (b)].sort();
+// c = [...new Set (c)].sort();
+
+// let tripletsCount = 0;
+//     let tripletsArray = []
+// let lena = a.length; lenb = b.length; lenc = c.length;
+
+//     for ( let i = 0; i < lena ; i++ ) {
+//         for ( let j = 0; j < lenb ; j++ ) {
+//             for ( let k = 0; k < lenc ; k++ ) {
+//                 tripletsArray.push([a[i], b[j], c[k]])
+//             }
+//         }
+//     }
+
+//     for ( let i = 0; i < tripletsArray.length ; i++ ) {
+//             if ( tripletsArray[i][0] <= tripletsArray[i][1] && tripletsArray[i][1] >= tripletsArray[i][2] ){
+//                 tripletsCount++;
+
+//             }
+       
+//         }
+
+
+//     console.log(tripletsCount);
+//     console.log(tripletsArray);
+
+// let kachra = [2,3,5,8,9,0,98,8,76,5,4,5]
+
+// let newKachra = kachra.splice(4, kachra.length)
+
+// console.log(kachra)
+
+
+a = [1,4,5];
+b = [2,3, 3];
+c = [1,2,3];
+
+a = [...new Set (a)];
+b = [...new Set (b)];
+c = [...new Set (c)];
+
+let tripletsCount = 0;
+    let tripletsArray = []
+let lena = a.length; lenb = b.length; lenc = c.length;
+
+    for ( let i = 0; i < lena ; i++ ) {
+        for ( let j = 0; j < lenb ; j++ ) {
+            for ( let k = 0; k < lenc ; k++ ) {
+                // tripletsArray.push([a[i], b[j], c[k]])
+                if ( a[i] <= b[j] && b[j] >= c[k] ){
+                    tripletsCount++;
+                    // console.log(tripletsArray[i]);
+                }
+            }
+        }
+    }
+
+    // for ( let i = 0; i < tripletsArray.length ; i++ ) {
+    //         if ( tripletsArray[i][0] <= tripletsArray[i][1] && tripletsArray[i][1] >= tripletsArray[i][2] ){
+    //             tripletsCount++;
+
+    //         }
+       
+    //     }
+
+
+    // console.log(tripletsCount);
+    // console.log(tripletsArray);
+
+
+
+let lowerAlp = `abcdefghijklmnopqrstuvwxyz`;
+s = `There's-a-starman-waiting-in-the-sky`;
+let newString = ''
+let k = 3;
+
+for ( let i = 0; i < s.length-1; i++) {
+    var code = s[i].charCodeAt(0) ;
+        if ( (code >= 65 && code <= 90)) {
+            code = ( (code - 65 + k) % 26 + 65 )
+        } else if ( code >= 97 && code <= 122) {
+            code = ( (code - 97 + k) % 26 + 97 )
+        }
+        newString += String.fromCharCode(code)
+}
+
+
+
+console.log(newString);
