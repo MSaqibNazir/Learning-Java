@@ -997,19 +997,31 @@ function hurdleRace(k, height) {
 // HackerRank Exercise - Utopian Tree
 // ==================================
 
-var cycle = 0
+n = 10
 
-function utopianTree(cycle) {
-    
+function utopianTree(n) {
     let height = 1;
-    for ( let i = 1; i <= cycle; i++ ) {
-        if ( cycle === 0 ) return height;
-        if ( i % 2 !== 0 ) height = height*2
-        if ( i % 2 === 0 ) height = height + 1 
-        
-        console.log(i, height);
-        
+    for ( let i = 1; i <= n; i++ ) {
+        if ( n === 0 ) return height;
+        if ( i % 2 !== 0 ) height = height*2;
+        if ( i % 2 === 0 ) height = height + 1;      
     }
-    console.log( 'final height :', height);
-};
-console.log(utopianTree(cycle));
+    return height
+}
+
+// console.log(utopianTree(n));
+
+// HackerRank Exercise - Angry Professor
+// =====================================
+
+a = [-1, -3, 4, 2];
+k = 3 // cancellation threshhold
+
+
+console.log(angryProfessor(k, a));
+
+function angryProfessor(k, a) {
+    return (a.filter(a=> a<= 0).length < k) ? "NO" : 'YES'
+
+}
+console.log(a.filter(a=> a<= 0).length);
