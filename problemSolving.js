@@ -921,21 +921,57 @@ let lena = a.length; lenb = b.length; lenc = c.length;
 
 
 
+// HackerRank Ex - Caesar Cipher
+// =============================
+
 let lowerAlp = `abcdefghijklmnopqrstuvwxyz`;
 s = `There's-a-starman-waiting-in-the-sky`;
 let newString = ''
 let k = 3;
-
-for ( let i = 0; i < s.length-1; i++) {
-    var code = s[i].charCodeAt(0) ;
+    
+    for ( let i = 0; i < s.length; i++) {
+        var code = s[i].charCodeAt(0) ;
         if ( (code >= 65 && code <= 90)) {
             code = ( (code - 65 + k) % 26 + 65 )
         } else if ( code >= 97 && code <= 122) {
             code = ( (code - 97 + k) % 26 + 97 )
         }
         newString += String.fromCharCode(code)
+    }
+
+// return newString;
+
+
+
+// HackerRank Ex - Repeated String
+// =============================== 
+
+
+s = 'baba'
+n = 10
+
+console.log(repeatedString(s, n))
+function repeatedString (s, n) {
+    s = s.split ('')
+    
+    // if (!s.includes('a')) return 0;
+
+    if (s.length === 1) return n;
+
+    let count = 0;
+    s.forEach ( val => {
+        if (val === 'a')
+        count++
+    }) 
+
+    let remaining = parseInt(n/s.length); // Math.floor(n/s.length)
+    count = count * remaining
+
+    let odd = n % s.length;
+    for ( i = 0; i < odd; i++) {
+        if (s[i] === 'a') {
+            count++
+        }
+    }
+    return count
 }
-
-
-
-console.log(newString);
