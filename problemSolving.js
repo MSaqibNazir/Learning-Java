@@ -984,11 +984,32 @@ function repeatedString (s, n) {
 height = [ 1,2,3,3,2 ];
 k = 4
 
-console.log( hurdleRace (k, height) );
+// console.log( hurdleRace (k, height) );
 
 function hurdleRace(k, height) {
     let maxHeight = Math.max(...height)
 
     return k < maxHeight ? maxHeight-k : 0
 
-}
+};
+
+
+// HackerRank Exercise - Utopian Tree
+// ==================================
+
+var cycle = 0
+
+function utopianTree(cycle) {
+    
+    let height = 1;
+    for ( let i = 1; i <= cycle; i++ ) {
+        if ( cycle === 0 ) return height;
+        if ( i % 2 !== 0 ) height = height*2
+        if ( i % 2 === 0 ) height = height + 1 
+        
+        console.log(i, height);
+        
+    }
+    console.log( 'final height :', height);
+};
+console.log(utopianTree(cycle));
