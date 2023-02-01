@@ -1018,10 +1018,34 @@ a = [-1, -3, 4, 2];
 k = 3 // cancellation threshhold
 
 
-console.log(angryProfessor(k, a));
+// console.log(angryProfessor(k, a));
 
 function angryProfessor(k, a) {
-    return (a.filter(a=> a<= 0).length < k) ? "NO" : 'YES'
+    return (a.filter(a=> a<= 0).length < k) ? "YES" : "NO"
+};
 
+
+// HackerRank Exercise - Beautiful Days at the Movies
+// ==================================================
+i = 20; 2
+j = 23; 32
+k = 6;
+
+console.log(beautifulDays(i, j, k));
+
+function beautifulDays(i, j, k) {
+    let daysCount = 0;
+
+    for ( let start = i; start <= j; start++ ) {
+            // console.log(start, parseInt(String(start).split("").reverse().join('')), 
+            // "Logic ", Math.abs(start - parseInt(String(start).split("").reverse().join('')))%k);
+        if(Math.abs((start - parseInt(String(start).split("").reverse().join('')))%k) === 0) {
+            daysCount++
+            console.log(start);
+        };
+    }
+    
+    return daysCount
+    
+    
 }
-console.log(a.filter(a=> a<= 0).length);
