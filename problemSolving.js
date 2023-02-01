@@ -950,11 +950,11 @@ let k = 3;
 s = 'baba'
 n = 10
 
-console.log(repeatedString(s, n))
+// console.log(repeatedString(s, n))
 function repeatedString (s, n) {
     s = s.split ('')
     
-    // if (!s.includes('a')) return 0;
+    if (!s.includes('a')) return 0;
 
     if (s.length === 1) return n;
 
@@ -974,4 +974,21 @@ function repeatedString (s, n) {
         }
     }
     return count
+};
+
+
+
+// HackerRank Exercise - The Hurdle Race
+// =====================================
+
+height = [ 1,2,3,3,2 ];
+k = 4
+
+console.log( hurdleRace (k, height) );
+
+function hurdleRace(k, height) {
+    let maxHeight = Math.max(...height)
+
+    return k < maxHeight ? maxHeight-k : 0
+
 }
