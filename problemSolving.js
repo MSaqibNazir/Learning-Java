@@ -1031,7 +1031,7 @@ i = 20; 2
 j = 23; 32
 k = 6;
 
-console.log(beautifulDays(i, j, k));
+// console.log(beautifulDays(i, j, k));
 
 function beautifulDays(i, j, k) {
     let daysCount = 0;
@@ -1043,9 +1043,46 @@ function beautifulDays(i, j, k) {
             daysCount++
             console.log(start);
         };
-    }
+    }  
+    return daysCount 
+}
+
+
+// HackerRank Exercise - Equalize the Array
+// ========================================
+
+// let arr = [3, 3, 2, 1, 3];
+let arr = [1, 2, 3, 1, 2, 3, 3, 3]
+// let arr = [24, 29 ,70 ,43, 12 ,27 ,29 ,24 ,41 ,12 ,41 ,43, 24, 70 ,24 ,100 ,
+//     41 ,43 ,43 ,100 ,29, 70, 100 ,43 ,41 ,27 ,70 ,70 ,59 ,41 ,24 ,24 ,29 ,43 ,24 ,
+//     27 ,70 ,24 ,27 ,70 ,24 ,70 ,27 ,24 ,43 ,27 ,100, 41, 12, 70, 43, 70, 62, 12, 59, 
+//     29 ,62 ,41 ,100 ,43 ,43 ,59 ,59 ,70 ,12 ,27 ,43 ,43 ,27 ,27 ,27 ,24 ,43 ,43 ,62 ,43 ,70, 29]
+
+
+
+// function pttattta(arr) {
+//     let deletions =  Infinity
+//     console.log([...new Set(arr)]);
     
-    return daysCount
+//     for (const unique of [...new Set(arr)]) {
+//         deletions = Math.min(arr.filter((value) => value !== unique).length, deletions);
+//         console.log(arr.filter((value) => value !== unique), deletions)
+//     }
     
+//     return deletions;
+// }
+
+arr = [1, 2, 3, 1, 2, 3, 3, 3]
+
+console.log(equalizeArray(arr))
+
+function equalizeArray(arr) {
+    let common = [...new Set(arr)] //1 2
+    let deletions = []
+    for ( const i of common ){
+        deletions.push (arr.filter ( (value) => value !== i ).length)
+    };
+    // console.log(deletions);
     
+    return Math.min(...deletions)
 }
