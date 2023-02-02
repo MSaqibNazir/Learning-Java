@@ -1051,30 +1051,11 @@ function beautifulDays(i, j, k) {
 // HackerRank Exercise - Equalize the Array
 // ========================================
 
-// let arr = [3, 3, 2, 1, 3];
-let arr = [1, 2, 3, 1, 2, 3, 3, 3]
-// let arr = [24, 29 ,70 ,43, 12 ,27 ,29 ,24 ,41 ,12 ,41 ,43, 24, 70 ,24 ,100 ,
-//     41 ,43 ,43 ,100 ,29, 70, 100 ,43 ,41 ,27 ,70 ,70 ,59 ,41 ,24 ,24 ,29 ,43 ,24 ,
-//     27 ,70 ,24 ,27 ,70 ,24 ,70 ,27 ,24 ,43 ,27 ,100, 41, 12, 70, 43, 70, 62, 12, 59, 
-//     29 ,62 ,41 ,100 ,43 ,43 ,59 ,59 ,70 ,12 ,27 ,43 ,43 ,27 ,27 ,27 ,24 ,43 ,43 ,62 ,43 ,70, 29]
 
-
-
-// function pttattta(arr) {
-//     let deletions =  Infinity
-//     console.log([...new Set(arr)]);
-    
-//     for (const unique of [...new Set(arr)]) {
-//         deletions = Math.min(arr.filter((value) => value !== unique).length, deletions);
-//         console.log(arr.filter((value) => value !== unique), deletions)
-//     }
-    
-//     return deletions;
-// }
 
 arr = [1, 2, 3, 1, 2, 3, 3, 3]
 
-console.log(equalizeArray(arr))
+// console.log(equalizeArray(arr))
 
 function equalizeArray(arr) {
     let common = [...new Set(arr)] //1 2
@@ -1082,7 +1063,35 @@ function equalizeArray(arr) {
     for ( const i of common ){
         deletions.push (arr.filter ( (value) => value !== i ).length)
     };
-    // console.log(deletions);
     
     return Math.min(...deletions)
+}
+
+
+// HackerRank Exercise - Viral Advertising
+// =======================================
+
+n = 5;
+console.log( viralAdvertising(n) );
+
+function viralAdvertising(n) {
+    n = n
+    let shared = 5;
+    let likes = Math.floor(shared/2)
+    let day = 1
+    let totalLikes = likes
+    
+    if ( n === 1) {
+        console.log( totalLikes );
+    } else {
+        for ( let i = 2; i <= n; i++) {
+            shared = likes * 3;
+
+            likes = Math.floor(shared/2)
+ 
+            totalLikes = totalLikes + likes
+
+        }
+        return totalLikes
+    }
 }
