@@ -1102,13 +1102,36 @@ function viralAdvertising(n) {
 let m = 6; // No. of Candies
 s = 2;     // started from
 
-console.log(saveThePrisoner(n, m, s));
+// console.log(saveThePrisoner(n, m, s));
 
 function saveThePrisoner(n, m, s) {
-    n = 4; // No. of Prisioners
-    for ( let i = s; i <= n ; i++){
-        for ( let j = 1; j <= m; j++) {
-            console.log([j]);
-        }
+    return ((m % n) + (s - 1)) % n || n
+}
+
+
+
+// HackerRank Exercise - Cut the sticks
+// ====================================
+arr = [ 1, 2, 3 ];
+
+var lengthArray = []
+
+while ( arr.length != 0 ) {
+
+    var min = Math.min (...arr) 
+    lengthArray.push(arr.length)
+
+    for ( let i = 0; i < arr.length ; i++ ) {
+
+        let sub = arr[i] - min 
+
+        if ( sub === 0 ){
+        arr.splice(i, 1)
+        i--;
+    }else {
+        arr[i] = sub
     }
 }
+}
+
+console.log(lengthArray);
