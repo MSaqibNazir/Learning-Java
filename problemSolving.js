@@ -1134,4 +1134,45 @@ while ( arr.length != 0 ) {
 }
 }
 
-console.log(lengthArray);
+// console.log(lengthArray);
+
+
+// HackerRank Exercise - Beautiful Triplets
+// ========================================
+
+let btArr = [2,2,3,4,5];
+let d = 1;
+
+console.log(beautifulTriplets(d, btArr));
+
+function beautifulTriplets(d, arr) {
+    // let output = 0;
+    // for ( let i = 0; i < arr.length; i++ )
+    //     for ( let j = i + 1; j < arr.length; j++ )
+    //         for ( let k = j + 1; k < arr.length; k++ )
+    //             if(arr[k] - arr[j] === d && arr[j] - arr[i] === d){
+    //                 output++
+    //             }
+    // return output
+
+    // let result = 0;
+    // for (let i = 0; i < arr.length; i++) {
+    //     const numb1 = arr[i] - d;
+    //     const numb2 = numb1 - d;
+    //     if (arr.includes(numb1) && arr.includes(numb2)) {
+    //         result += 1;
+    //     }
+    // }
+    // return result;
+    let result = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+        if (arr.includes(arr[i] + d) && arr.includes(arr[i] + d * 2)) {
+            console.log((arr[i] + d) ,(arr[i] + d * 2))
+        }
+
+        
+    }
+    // return result
+}
+
