@@ -1072,19 +1072,18 @@ function equalizeArray(arr) {
 // =======================================
 
 n = 5;
-console.log( viralAdvertising(n) );
+// console.log( viralAdvertising(n) );d
 
 function viralAdvertising(n) {
-    n = n
+
     let shared = 5;
     let likes = Math.floor(shared/2)
-    let day = 1
     let totalLikes = likes
-    
+
     if ( n === 1) {
         console.log( totalLikes );
     } else {
-        for ( let i = 2; i <= n; i++) {
+        for ( let days = 2; days <= n; days++) {
             shared = likes * 3;
 
             likes = Math.floor(shared/2)
@@ -1093,5 +1092,23 @@ function viralAdvertising(n) {
 
         }
         return totalLikes
+    }
+};
+
+
+// HackerRank Exercise - Save the Prisoner!
+// ======================================== 
+
+let m = 6; // No. of Candies
+s = 2;     // started from
+
+console.log(saveThePrisoner(n, m, s));
+
+function saveThePrisoner(n, m, s) {
+    n = 4; // No. of Prisioners
+    for ( let i = s; i <= n ; i++){
+        for ( let j = 1; j <= m; j++) {
+            console.log([j]);
+        }
     }
 }
