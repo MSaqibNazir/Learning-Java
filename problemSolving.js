@@ -1143,7 +1143,7 @@ while ( arr.length != 0 ) {
 let btArr = [2,2,3,4,5];
 let d = 1;
 
-console.log(beautifulTriplets(d, btArr));
+// console.log(beautifulTriplets(d, btArr));
 
 function beautifulTriplets(d, arr) {
     // let output = 0;
@@ -1164,15 +1164,43 @@ function beautifulTriplets(d, arr) {
     //     }
     // }
     // return result;
-    let result = 0;
+    // let result = 0;
 
-    for (let i = 0; i < arr.length; i++) {
-        if (arr.includes(arr[i] + d) && arr.includes(arr[i] + d * 2)) {
-            console.log((arr[i] + d) ,(arr[i] + d * 2))
-        }
+    // for (let i = 0; i < arr.length; i++) {
+    //     if (arr.includes(arr[i] + d) && arr.includes(arr[i] + d * 2)) {
+    //         console.log((arr[i] + d) ,(arr[i] + d * 2))
+    //     }
 
         
-    }
-    // return result
+    // }
+    // // return result
+
+    return arr.filter ( val => arr.includes(val + d) && arr.includes(val + d * 2)).length;
 }
 
+
+
+// HackerRank Exercise - Encryption
+// ================================
+
+s = "haveaniceday"
+console.log( encryption(s) );
+function encryption(s) {
+    
+    let noSpace = s.replace(/\s/g, '');
+    let rows = Math.floor(Math.sqrt(noSpace.length));
+    let col = Math.ceil(Math.sqrt(noSpace.length));
+
+    if ( rows * col < noSpace.length ) rows++;
+
+    var encrypted = "";
+    for ( let i = 0; i < col; i++ ) {                                                                        
+        let jump = 0;
+        while ( i + jump < noSpace.length ) {
+            encrypted += noSpace[i + jump];
+            jump += col;    
+        }
+        encrypted += " ";
+    }
+    return encrypted
+}
