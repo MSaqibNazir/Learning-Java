@@ -1237,7 +1237,7 @@ let topic = ['10101',
               '11010', 
               '00101'];
 
-console.log(acmTeam(topic));
+// console.log(acmTeam(topic));
 
 function acmTeam(topic) {
     let arr = []
@@ -1253,10 +1253,40 @@ function acmTeam(topic) {
         }
     }
    // arr = [4, 5, 3, 4, 4, 5]
-   const max = arr.sort ((a,b) => b-a)[0]
+   const max = arr.sort ((a,b) => b-a)[0];
    let count = 0;
    for ( let i of arr ) if ( i === max ) count++
    
 
    return [max, count]
 };
+
+
+// HackerRank Exercise - Append and Delete
+// =======================================
+
+s = 'y';
+t = 'yu';
+k = 2;
+
+// s = s.split('')
+// s.pop()
+// console.log(s);
+console.log(appendAndDelete(s, t, k));
+
+function appendAndDelete(s, t, k) {
+    if ( k >= s.length + t.length ){
+        return 'Yes'
+    } else {
+        let newString = ""
+        for ( let i = 0; i < s.length; i++ ) {
+            if ( s[i] === t[i] ) {
+                newString += s[i]
+            } else break;
+
+            }
+        return ((s.length - newString.length) + (t.length - newString.length) <= k )? 'Yes' : 'No'
+
+        
+    }
+}
