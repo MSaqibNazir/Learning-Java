@@ -1272,11 +1272,14 @@ k = 2;
 // s = s.split('')
 // s.pop()
 // console.log(s);
-console.log(appendAndDelete(s, t, k));
+// console.log(appendAndDelete(s, t, k));
 
 function appendAndDelete(s, t, k) {
     if ( k >= s.length + t.length ){
         return 'Yes'
+    } else if (s.length < t.length) {
+        return "No"
+    
     } else {
         let newString = ""
         for ( let i = 0; i < s.length; i++ ) {
@@ -1289,4 +1292,63 @@ function appendAndDelete(s, t, k) {
 
         
     }
+};
+
+
+
+// HackerRank Exercise - Lisa's Workbook
+// =====================================
+
+
+ n = 5 // arr.length // no of chapter
+ k = 3 // chapters on each page
+ arr = [4, 2, 6, 1, 10];
+
+//  console.log(workbook(n, k, arr));
+
+ function workbook(n, k, arr) {
+    let count = 0;
+    let page = 1;
+
+    for ( let i = 0; i < n ; i++ ) {
+        let m = k
+        for ( let j = 1; j <= arr[i]; j++ ) {
+            if ( j > m ) {
+
+                page++;
+                m += k
+
+            }
+            if ( j == page ) count++ 
+        }
+        page++
+    }
+return count;
+};
+
+
+// HackerRank Exercise - Extra Long Factorials
+// ===========================================
+
+n = 25
+console.log(extraLongFactorials(n));
+function extraLongFactorials(n) 
+{
+    for ( let i = n - 1; i > 1; i-- ) {
+        // console.log(n*i);
+        n *= i;
+    }
+    let result = BigInt(n)
+
+    console.log(result.toString());
+}
+
+{let bigInt = BigInt(n)
+    let factorial = 1n
+    for ( let i = 0n; i < bigInt; i++ ) {
+        // console.log(n*i);
+        factorial *= bigInt - i;
+    }
+
+    console.log(factorial.toString()) ;
 }
