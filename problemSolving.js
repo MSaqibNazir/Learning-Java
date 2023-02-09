@@ -1184,7 +1184,8 @@ function beautifulTriplets(d, arr) {
 // ================================
 
 s = "haveaniceday"
-console.log( encryption(s) );
+// console.log( encryption(s) );
+
 function encryption(s) {
     
     let noSpace = s.replace(/\s/g, '');
@@ -1203,4 +1204,59 @@ function encryption(s) {
         encrypted += " ";
     }
     return encrypted
+};
+
+
+// HackerRank Exercise - Circular Array Rotation
+// =============================================
+
+a = [ 3, 4, 5 ];
+k = 2;
+let queries = [1,2]
+
+// console.log(circularArrayRotation(a, k, queries));
+
+function circularArrayRotation(a, k, queries) {
+for ( let i = 0; i < k; i++ ) {  
+    a.unshift(a.pop())
 }
+let ar = [];
+for ( let i = 0; i < queries.length; i++ ) {
+ar.push(a[queries[i]])
+}
+return ar
+};
+
+
+
+// HackerRank Exercise - ACM ICPC Team
+// ===================================
+
+let topic = ['10101', 
+              '11100', 
+              '11010', 
+              '00101'];
+
+console.log(acmTeam(topic));
+
+function acmTeam(topic) {
+    let arr = []
+
+    for ( let i = 0 ; i < topic.length - 1 ; i++ ) {
+        for ( let j = i + 1; j < topic.length; j++ ) {
+            let count = 0;
+            for ( let k = 0; k < topic[0].length; k++ ) {
+                if ( topic [i][k] === '1' || topic[j][k] === '1')
+                count++;
+            }
+            arr.push(count)
+        }
+    }
+   // arr = [4, 5, 3, 4, 4, 5]
+   const max = arr.sort ((a,b) => b-a)[0]
+   let count = 0;
+   for ( let i of arr ) if ( i === max ) count++
+   
+
+   return [max, count]
+};
